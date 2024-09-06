@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Survey on federated learning threats: Concepts, taxonomy on attacks and defences, experimental study and challenges &#8212; Paper Digest</title>
+    <title>On hyperparameter optimization of machine learning algorithms: Theory and practice &#8212; Paper Digest</title>
   
   
   
@@ -41,12 +41,12 @@
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'paper/rodriguez2023survey';</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'paper/yang2020hyperparameter';</script>
     <link rel="icon" href="https://hsiangjenli.github.io/static/image/ico.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="On hyperparameter optimization of machine learning algorithms: Theory and practice" href="yang2020hyperparameter.html" />
-    <link rel="prev" title="A survey of privacy attacks in machine learning" href="rigaki2023survey.html" />
+    <link rel="prev" title="Survey on federated learning threats: Concepts, taxonomy on attacks and defences, experimental study and challenges" href="rodriguez2023survey.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -153,8 +153,8 @@
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of Contents:</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="rigaki2023survey.html">A survey of privacy attacks in machine learning</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Survey on federated learning threats: Concepts, taxonomy on attacks and defences, experimental study and challenges</a></li>
-<li class="toctree-l1"><a class="reference internal" href="yang2020hyperparameter.html">On hyperparameter optimization of machine learning algorithms: Theory and practice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rodriguez2023survey.html">Survey on federated learning threats: Concepts, taxonomy on attacks and defences, experimental study and challenges</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">On hyperparameter optimization of machine learning algorithms: Theory and practice</a></li>
 </ul>
 
     </div>
@@ -209,7 +209,7 @@
       
       
       
-      <li><a href="../_sources/paper/rodriguez2023survey.rst" target="_blank"
+      <li><a href="../_sources/paper/yang2020hyperparameter.rst" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -293,7 +293,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Survey on federated learning threats: Concepts, taxonomy on attacks and defences, experimental study and challenges</h1>
+    <h1>On hyperparameter optimization of machine learning algorithms: Theory and practice</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -303,11 +303,15 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributions">Contributions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differnt-types-of-federated-learning">Differnt types of Federated Learning</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#term-explanation">Term Explanation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#terms-explanation">Terms Explanation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-hyper-parameter-optimization-is-important">Why hyper-parameter optimization is important?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">Problem Statement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mehods">Mehods</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-optimization-and-hyper-parameter-optimization-problems">Mathematical optimization and hyper-parameter optimization problems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
             </nav>
         </div>
@@ -319,106 +323,176 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="survey-on-federated-learning-threats-concepts-taxonomy-on-attacks-and-defences-experimental-study-and-challenges">
-<h1>Survey on federated learning threats: Concepts, taxonomy on attacks and defences, experimental study and challenges<a class="headerlink" href="#survey-on-federated-learning-threats-concepts-taxonomy-on-attacks-and-defences-experimental-study-and-challenges" title="Link to this heading">#</a></h1>
+  <section id="on-hyperparameter-optimization-of-machine-learning-algorithms-theory-and-practice">
+<h1>On hyperparameter optimization of machine learning algorithms: Theory and practice<a class="headerlink" href="#on-hyperparameter-optimization-of-machine-learning-algorithms-theory-and-practice" title="Link to this heading">#</a></h1>
 <div class="admonition note">
     <p class="admonition-title">Note</p>
     <p>Hey guys, this is my personal reading note. I am not sure there might be some mistakes in my understanding. Please feel free to correct me (<a class="reference external" href="mailto:hsiangjenli&#37;&#52;&#48;gmail&#46;com">hsiangjenli<span>&#64;</span>gmail<span>&#46;</span>com</a>) if you find any. Thanks!</p>
 </div><ul class="simple">
-<li><p>Publish Year : <span id="id1"><a class="reference internal" href="#id5" title="Nuria Rodríguez-Barroso, Daniel Jiménez-López, M Victoria Luzón, Francisco Herrera, and Eugenio Martínez-Cámara. Survey on federated learning threats: concepts, taxonomy on attacks and defences, experimental study and challenges. Information Fusion, 90:148–173, 2023.">2023</a></span></p></li>
-<li><p>Authors : <span id="id2"><a class="reference internal" href="#id5" title="Nuria Rodríguez-Barroso, Daniel Jiménez-López, M Victoria Luzón, Francisco Herrera, and Eugenio Martínez-Cámara. Survey on federated learning threats: concepts, taxonomy on attacks and defences, experimental study and challenges. Information Fusion, 90:148–173, 2023.">Rodríguez-Barroso, Jiménez-López, Luzón, Herrera, and Martínez-Cámara</a></span></p></li>
+<li><p>Publish Year : <span id="id1"><a class="reference internal" href="#id16" title="Li Yang and Abdallah Shami. On hyperparameter optimization of machine learning algorithms: theory and practice. Neurocomputing, 415:295–316, 2020.">2020</a></span></p></li>
+<li><p>Authors : <span id="id2"><a class="reference internal" href="#id16" title="Li Yang and Abdallah Shami. On hyperparameter optimization of machine learning algorithms: theory and practice. Neurocomputing, 415:295–316, 2020.">Yang and Shami</a></span></p></li>
 </ul>
+<section id="terms-explanation">
+<h2>Terms Explanation<a class="headerlink" href="#terms-explanation" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Model parameter</p>
+<ul>
+<li><p>The parameters that are learned during the training process (e.g., weights in neural networks)</p></li>
+</ul>
+</li>
+<li><p>Hyper parameter</p>
+<ul>
+<li><p>The parameters that are <strong>not</strong> learned during the training process</p></li>
+</ul>
+</li>
+<li><p>Hyper-Parameter Optimization (HPO)</p></li>
+<li><p>Surrogate functions（代理函數</p>
+<ul>
+<li><p>是在優化問題中特別常用的一個概念，尤其在貝葉斯優化（Bayesian Optimization）中。代理函數的核心思想是，用一個比較容易處理且計算成本較低的模型來近似表示目標函數，以便在優化過程中節省計算資源</p></li>
+</ul>
+</li>
+</ul>
+</section>
 <section id="abstract">
 <h2>Abstract<a class="headerlink" href="#abstract" title="Link to this heading">#</a></h2>
+<p>Hyper parameter:</p>
 <ul class="simple">
-<li><p>federated learning is threatened by adversarial attacks against the integrity of the learning model and the privacy of data via a distributed approach to tackle local and global learning</p></li>
-<li><p>A taxonomy of</p>
+<li><p>categorical hyperparameters</p></li>
+<li><p>continuous hyperparameters</p></li>
+<li><p>discrete hyperparameters</p></li>
+</ul>
+<p>non-linear hyper-parameter interactions</p>
+<section id="why-hyper-parameter-optimization-is-important">
+<h3>Why hyper-parameter optimization is important?<a class="headerlink" href="#why-hyper-parameter-optimization-is-important" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
-<li><p>adversarial attacks (e.g., ….)</p></li>
-<li><p>defence methods (e.g., ….)</p></li>
+<li><p>Reduce the human manipulation, because the hyper-parameters usually have many choices which cause the search space to be very large</p></li>
+<li><p>Improve the performance of the model</p></li>
+<li><p>Make the model more reproducible</p></li>
 </ol>
-</li>
-</ul>
-<p>that depict a general picture of this vulnerability of federated learning and how to overcome it</p>
 </section>
-<section id="contributions">
-<h2>Contributions<a class="headerlink" href="#contributions" title="Link to this heading">#</a></h2>
-</section>
-<section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Adversarial attacks</p>
+<section id="problem-statement">
+<h3>Problem Statement<a class="headerlink" href="#problem-statement" title="Link to this heading">#</a></h3>
 <ul>
-<li><p>malicious manipulation of the training data <span id="id3">[<a class="reference internal" href="#id7" title="Nilesh Dalvi, Pedro Domingos, Mausam, Sumit Sanghai, and Deepak Verma. Adversarial classification. In Proceedings of the tenth ACM SIGKDD international conference on Knowledge discovery and data mining, 99–108. 2004.">3</a>]</span></p></li>
+<li><p>HPO problems are <strong>non-convex</strong> or <strong>non-differentiable</strong> optimization problems, which makes it difficult to find the global optimum <span id="id3">[<a class="reference internal" href="#id17" title="Gang Luo. A review of automatic selection methods for machine learning algorithms and hyper-parameter values. Network Modeling Analysis in Health Informatics and Bioinformatics, 5:1–16, 2016.">2</a>]</span></p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Non-convex optimization problem（非凸優化問題）：</p>
+<ul class="simple">
+<li><p>凸優化問題是指問題的目標函數具有一個凸的形狀（例如像一個碗的形狀），這意味著從任意一點朝著目標函數的最低點移動時，最終都會到達全局最優解。</p></li>
+<li><p>非凸優化問題則相反，目標函數可能會有多個局部最小值（局部低谷），類似於山峰與山谷的形狀。在這種情況下，優化算法可能會陷入某個局部最小值，而無法找到全局最低點（全局最優解）。</p></li>
 </ul>
 </li>
+<li><p>Non-differentiable optimization problem（不可微優化問題）：</p>
+<ul class="simple">
+<li><p>可微優化問題指的是目標函數在每個點上都有明確的導數，這使得我們能夠利用導數資訊（如梯度下降算法）來找到目標函數的最低點。</p></li>
+<li><p>不可微優化問題是指目標函數在某些點或某些區域中不連續或不可微分，這會使得使用標準的基於導數的優化算法（如梯度下降）變得困難，因為無法得到正確的導數資訊來引導優化方向。</p></li>
 </ul>
-</section>
-<section id="differnt-types-of-federated-learning">
-<h2>Differnt types of Federated Learning<a class="headerlink" href="#differnt-types-of-federated-learning" title="Link to this heading">#</a></h2>
-<ol class="arabic">
-<li><p>Horizontal Federated Learning (HFL) 共同的 Feature space</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>Each data source has the differnt feature space and sample space</p></li>
-<li><p>HFL will only use the overlapped feature space to train the model</p></li>
-</ul>
+</li>
+</ol>
 </div></blockquote>
 </li>
-<li><p>Vertical Federated Learning (VFL) 共同的 Sample space</p></li>
-<li><p>Federated Transfer Learning (FTL)</p></li>
+</ul>
+</section>
+<section id="mehods">
+<h3>Mehods<a class="headerlink" href="#mehods" title="Link to this heading">#</a></h3>
+<p>Taxonomy of HPO methods by Hyper-Parameter Type</p>
+<ol class="arabic simple">
+<li><p>Continuous hyperparameters (e.g., learning rate)</p>
+<ul class="simple">
+<li><p>Gradient descent-based methods</p></li>
+</ul>
+</li>
+<li><p>Discrete, Categorical, and Conditional hyperparameters</p>
+<ul class="simple">
+<li><p>Decision Theoretic Approaches</p>
+<ul>
+<li><p>Grid search (GS)</p></li>
+<li><p>Random search (RS)</p></li>
+</ul>
+</li>
+<li><p>Bayesian Optimization Models (BO) <span id="id4">[<a class="reference internal" href="#id18" title="Katharina Eggensperger, Matthias Feurer, Frank Hutter, James Bergstra, Jasper Snoek, Holger Hoos, Kevin Leyton-Brown, and others. Towards an empirical foundation for assessing bayesian optimization of hyperparameters. In NIPS workshop on Bayesian Optimization in Theory and Practice, volume 10, 1–5. 2013.">3</a>]</span></p>
+<ul>
+<li><p>Choose the next hyper-parameter value by using the results from previously tested values as a guide</p></li>
+<li><p>Can use various models as <strong>surrogate functions (代理函數)</strong> to estimate the distribution of the objective function <span id="id5">[<a class="reference internal" href="#id19" title="Katharina Eggensperger, Frank Hutter, Holger Hoos, and Kevin Leyton-Brown. Efficient benchmarking of hyperparameter optimizers via surrogates. In Proceedings of the AAAI conference on artificial intelligence, volume 29. 2015.">4</a>]</span></p>
+<ul>
+<li><p>Gaussian process (GP), random forest (RF), and tree-structured Parzen estimators (TPE) models <span id="id6">[<a class="reference internal" href="#id19" title="Katharina Eggensperger, Frank Hutter, Holger Hoos, and Kevin Leyton-Brown. Efficient benchmarking of hyperparameter optimizers via surrogates. In Proceedings of the AAAI conference on artificial intelligence, volume 29. 2015.">4</a>]</span></p></li>
+</ul>
+</li>
+<li><p>Difficult to parallelize</p></li>
+</ul>
+</li>
+<li><p>Multi-fidelity Optimization Techniques</p>
+<ul>
+<li><p>bandit-based algorithms</p></li>
+<li><p>Hyperband <span id="id7">[<a class="reference internal" href="#id20" title="Lisha Li, Kevin Jamieson, Giulia DeSalvo, Afshin Rostamizadeh, and Ameet Talwalkar. Hyperband: a novel bandit-based approach to hyperparameter optimization. Journal of Machine Learning Research, 18(185):1–52, 2018.">5</a>]</span>, which can be considered as an improvement of Random Search</p></li>
+</ul>
+</li>
+<li><p>Metaheuristics Algorithms</p>
+<ul>
+<li><p>Genetic algorithms (GA)</p></li>
+<li><p>Particle swarm optimization (PSO) <span id="id8">[<a class="reference internal" href="#id21" title="Pablo Ribalta Lorenzo, Jakub Nalepa, Michal Kawulok, Luciano Sanchez Ramos, and José Ranilla Pastor. Particle swarm optimization for hyper-parameter selection in deep neural networks. In Proceedings of the genetic and evolutionary computation conference, 481–488. 2017.">6</a>]</span></p></li>
+<li><p>Computational complexity</p></li>
+</ul>
+</li>
+</ul>
+</li>
 </ol>
 </section>
-<section id="term-explanation">
-<h2>Term Explanation<a class="headerlink" href="#term-explanation" title="Link to this heading">#</a></h2>
+</section>
+<section id="mathematical-optimization-and-hyper-parameter-optimization-problems">
+<h2>Mathematical optimization and hyper-parameter optimization problems<a class="headerlink" href="#mathematical-optimization-and-hyper-parameter-optimization-problems" title="Link to this heading">#</a></h2>
+<p>Mathematical optimization is the process of finding the best solution from <strong>a set of available candidates</strong> to maximize or minimize the objective function <span id="id9">[<a class="reference internal" href="#id22" title="Shiliang Sun, Zehui Cao, Han Zhu, and Jing Zhao. A survey of optimization methods from a machine learning perspective. IEEE transactions on cybernetics, 50(8):3668–3681, 2019.">7</a>]</span></p>
+<p>optimization problems can be classified as</p>
+<ol class="arabic">
+<li><p>Unconstrained optimization</p>
+<div class="math notranslate nohighlight">
+\[\min_{x \in \mathbb{R}} f(x)\]</div>
+</li>
+<li><p>Constrained optimization</p>
 <ul class="simple">
-<li><p><strong>Federated Learning</strong> aims at generating a collaboratively trained global learning model without sharing the data owned by the distributed data sources</p></li>
+<li><p>The role of constraints is to limit the possible values of the optimal solution to certain areas of the search space, named the <strong>feasible region</strong> <span id="id10">[<a class="reference internal" href="#id23" title="Stephen P Bradley, Arnoldo C Hax, and Thomas L Magnanti. Applied mathematical programming. (No Title), 1977.">8</a>]</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(g_i(x)\)</span> : inequality constraints function</p></li>
+<li><p><span class="math notranslate nohighlight">\(h_i(x)\)</span> : equality constraints function</p></li>
 </ul>
-<div class="docutils container" id="id4">
+</li>
+</ol>
+</section>
+<section id="references">
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
+<div class="docutils container" id="id11">
 <div role="list" class="citation-list">
-<div class="citation" id="id8" role="doc-biblioentry">
+<div class="citation" id="id16" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
-<p>Maria Rigaki and Sebastian Garcia. A survey of privacy attacks in machine learning. <em>ACM Computing Surveys</em>, 56(4):1–34, 2023.</p>
-</div>
-<div class="citation" id="id5" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></span>
 <span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>)</span>
-<p>Nuria Rodríguez-Barroso, Daniel Jiménez-López, M Victoria Luzón, Francisco Herrera, and Eugenio Martínez-Cámara. Survey on federated learning threats: concepts, taxonomy on attacks and defences, experimental study and challenges. <em>Information Fusion</em>, 90:148–173, 2023.</p>
-</div>
-<div class="citation" id="id7" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
-<p>Nilesh Dalvi, Pedro Domingos, Mausam, Sumit Sanghai, and Deepak Verma. Adversarial classification. In <em>Proceedings of the tenth ACM SIGKDD international conference on Knowledge discovery and data mining</em>, 99–108. 2004.</p>
-</div>
-<div class="citation" id="id9" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></span>
 <p>Li Yang and Abdallah Shami. On hyperparameter optimization of machine learning algorithms: theory and practice. <em>Neurocomputing</em>, 415:295–316, 2020.</p>
 </div>
-<div class="citation" id="id10" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></span>
+<div class="citation" id="id17" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
 <p>Gang Luo. A review of automatic selection methods for machine learning algorithms and hyper-parameter values. <em>Network Modeling Analysis in Health Informatics and Bioinformatics</em>, 5:1–16, 2016.</p>
 </div>
-<div class="citation" id="id11" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></span>
+<div class="citation" id="id18" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">3</a><span class="fn-bracket">]</span></span>
 <p>Katharina Eggensperger, Matthias Feurer, Frank Hutter, James Bergstra, Jasper Snoek, Holger Hoos, Kevin Leyton-Brown, and others. Towards an empirical foundation for assessing bayesian optimization of hyperparameters. In <em>NIPS workshop on Bayesian Optimization in Theory and Practice</em>, volume 10, 1–5. 2013.</p>
 </div>
-<div class="citation" id="id12" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></span>
+<div class="citation" id="id19" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id5">1</a>,<a role="doc-backlink" href="#id6">2</a>)</span>
 <p>Katharina Eggensperger, Frank Hutter, Holger Hoos, and Kevin Leyton-Brown. Efficient benchmarking of hyperparameter optimizers via surrogates. In <em>Proceedings of the AAAI conference on artificial intelligence</em>, volume 29. 2015.</p>
 </div>
-<div class="citation" id="id13" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></span>
+<div class="citation" id="id20" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">5</a><span class="fn-bracket">]</span></span>
 <p>Lisha Li, Kevin Jamieson, Giulia DeSalvo, Afshin Rostamizadeh, and Ameet Talwalkar. Hyperband: a novel bandit-based approach to hyperparameter optimization. <em>Journal of Machine Learning Research</em>, 18(185):1–52, 2018.</p>
 </div>
-<div class="citation" id="id14" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></span>
+<div class="citation" id="id21" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">6</a><span class="fn-bracket">]</span></span>
 <p>Pablo Ribalta Lorenzo, Jakub Nalepa, Michal Kawulok, Luciano Sanchez Ramos, and José Ranilla Pastor. Particle swarm optimization for hyper-parameter selection in deep neural networks. In <em>Proceedings of the genetic and evolutionary computation conference</em>, 481–488. 2017.</p>
 </div>
-<div class="citation" id="id15" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></span>
+<div class="citation" id="id22" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">7</a><span class="fn-bracket">]</span></span>
 <p>Shiliang Sun, Zehui Cao, Han Zhu, and Jing Zhao. A survey of optimization methods from a machine learning perspective. <em>IEEE transactions on cybernetics</em>, 50(8):3668–3681, 2019.</p>
 </div>
-<div class="citation" id="id16" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></span>
+<div class="citation" id="id23" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">8</a><span class="fn-bracket">]</span></span>
 <p>Stephen P Bradley, Arnoldo C Hax, and Thomas L Magnanti. Applied mathematical programming. <em>(No Title)</em>, 1977.</p>
 </div>
 </div>
@@ -438,22 +512,13 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="rigaki2023survey.html"
+       href="rodriguez2023survey.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">A survey of privacy attacks in machine learning</p>
+        <p class="prev-next-title">Survey on federated learning threats: Concepts, taxonomy on attacks and defences, experimental study and challenges</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="yang2020hyperparameter.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">On hyperparameter optimization of machine learning algorithms: Theory and practice</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -471,11 +536,15 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#contributions">Contributions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differnt-types-of-federated-learning">Differnt types of Federated Learning</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#term-explanation">Term Explanation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#terms-explanation">Terms Explanation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-hyper-parameter-optimization-is-important">Why hyper-parameter optimization is important?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#problem-statement">Problem Statement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#mehods">Mehods</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathematical-optimization-and-hyper-parameter-optimization-problems">Mathematical optimization and hyper-parameter optimization problems</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
   </nav></div>
 
