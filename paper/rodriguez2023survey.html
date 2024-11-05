@@ -45,7 +45,7 @@
     <link rel="icon" href="https://hsiangjenli.github.io/static/image/ico.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="On hyperparameter optimization of machine learning algorithms: Theory and practice" href="yang2020hyperparameter.html" />
+    <link rel="next" title="Privacy-preserving machine learning: Methods, challenges and directions" href="xu2021privacy.html" />
     <link rel="prev" title="A survey of privacy attacks in machine learning" href="rigaki2023survey.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -154,6 +154,7 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="rigaki2023survey.html">A survey of privacy attacks in machine learning</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Survey on federated learning threats: Concepts, taxonomy on attacks and defences, experimental study and challenges</a></li>
+<li class="toctree-l1"><a class="reference internal" href="xu2021privacy.html">Privacy-preserving machine learning: Methods, challenges and directions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="yang2020hyperparameter.html">On hyperparameter optimization of machine learning algorithms: Theory and practice</a></li>
 </ul>
 
@@ -308,6 +309,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differnt-types-of-federated-learning">Differnt types of Federated Learning</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#term-explanation">Term Explanation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference">Reference</a></li>
 </ul>
             </nav>
         </div>
@@ -349,7 +351,7 @@ document.write(`
 <ul class="simple">
 <li><p>Adversarial attacks</p>
 <ul>
-<li><p>malicious manipulation of the training data <span id="id3">[<a class="reference internal" href="#id7" title="Nilesh Dalvi, Pedro Domingos, Mausam, Sumit Sanghai, and Deepak Verma. Adversarial classification. In Proceedings of the tenth ACM SIGKDD international conference on Knowledge discovery and data mining, 99–108. 2004.">3</a>]</span></p></li>
+<li><p>malicious manipulation of the training data <span id="id3">[<a class="reference internal" href="#id7" title="Nilesh Dalvi, Pedro Domingos, Mausam, Sumit Sanghai, and Deepak Verma. Adversarial classification. In Proceedings of the tenth ACM SIGKDD international conference on Knowledge discovery and data mining, 99–108. 2004.">2</a>]</span></p></li>
 </ul>
 </li>
 </ul>
@@ -374,52 +376,19 @@ document.write(`
 <ul class="simple">
 <li><p><strong>Federated Learning</strong> aims at generating a collaboratively trained global learning model without sharing the data owned by the distributed data sources</p></li>
 </ul>
+</section>
+<section id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Link to this heading">#</a></h2>
 <div class="docutils container" id="id4">
 <div role="list" class="citation-list">
-<div class="citation" id="id8" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
-<p>Maria Rigaki and Sebastian Garcia. A survey of privacy attacks in machine learning. <em>ACM Computing Surveys</em>, 56(4):1–34, 2023.</p>
-</div>
 <div class="citation" id="id5" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
 <span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>)</span>
 <p>Nuria Rodríguez-Barroso, Daniel Jiménez-López, M Victoria Luzón, Francisco Herrera, and Eugenio Martínez-Cámara. Survey on federated learning threats: concepts, taxonomy on attacks and defences, experimental study and challenges. <em>Information Fusion</em>, 90:148–173, 2023.</p>
 </div>
 <div class="citation" id="id7" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
 <p>Nilesh Dalvi, Pedro Domingos, Mausam, Sumit Sanghai, and Deepak Verma. Adversarial classification. In <em>Proceedings of the tenth ACM SIGKDD international conference on Knowledge discovery and data mining</em>, 99–108. 2004.</p>
-</div>
-<div class="citation" id="id9" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></span>
-<p>Li Yang and Abdallah Shami. On hyperparameter optimization of machine learning algorithms: theory and practice. <em>Neurocomputing</em>, 415:295–316, 2020.</p>
-</div>
-<div class="citation" id="id10" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></span>
-<p>Gang Luo. A review of automatic selection methods for machine learning algorithms and hyper-parameter values. <em>Network Modeling Analysis in Health Informatics and Bioinformatics</em>, 5:1–16, 2016.</p>
-</div>
-<div class="citation" id="id11" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></span>
-<p>Katharina Eggensperger, Matthias Feurer, Frank Hutter, James Bergstra, Jasper Snoek, Holger Hoos, Kevin Leyton-Brown, and others. Towards an empirical foundation for assessing bayesian optimization of hyperparameters. In <em>NIPS workshop on Bayesian Optimization in Theory and Practice</em>, volume 10, 1–5. 2013.</p>
-</div>
-<div class="citation" id="id12" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></span>
-<p>Katharina Eggensperger, Frank Hutter, Holger Hoos, and Kevin Leyton-Brown. Efficient benchmarking of hyperparameter optimizers via surrogates. In <em>Proceedings of the AAAI conference on artificial intelligence</em>, volume 29. 2015.</p>
-</div>
-<div class="citation" id="id13" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></span>
-<p>Lisha Li, Kevin Jamieson, Giulia DeSalvo, Afshin Rostamizadeh, and Ameet Talwalkar. Hyperband: a novel bandit-based approach to hyperparameter optimization. <em>Journal of Machine Learning Research</em>, 18(185):1–52, 2018.</p>
-</div>
-<div class="citation" id="id14" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></span>
-<p>Pablo Ribalta Lorenzo, Jakub Nalepa, Michal Kawulok, Luciano Sanchez Ramos, and José Ranilla Pastor. Particle swarm optimization for hyper-parameter selection in deep neural networks. In <em>Proceedings of the genetic and evolutionary computation conference</em>, 481–488. 2017.</p>
-</div>
-<div class="citation" id="id15" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></span>
-<p>Shiliang Sun, Zehui Cao, Han Zhu, and Jing Zhao. A survey of optimization methods from a machine learning perspective. <em>IEEE transactions on cybernetics</em>, 50(8):3668–3681, 2019.</p>
-</div>
-<div class="citation" id="id16" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>11<span class="fn-bracket">]</span></span>
-<p>Stephen P Bradley, Arnoldo C Hax, and Thomas L Magnanti. Applied mathematical programming. <em>(No Title)</em>, 1977.</p>
 </div>
 </div>
 </div>
@@ -447,11 +416,11 @@ document.write(`
       </div>
     </a>
     <a class="right-next"
-       href="yang2020hyperparameter.html"
+       href="xu2021privacy.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">On hyperparameter optimization of machine learning algorithms: Theory and practice</p>
+        <p class="prev-next-title">Privacy-preserving machine learning: Methods, challenges and directions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -476,6 +445,7 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differnt-types-of-federated-learning">Differnt types of Federated Learning</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#term-explanation">Term Explanation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reference">Reference</a></li>
 </ul>
   </nav></div>
 

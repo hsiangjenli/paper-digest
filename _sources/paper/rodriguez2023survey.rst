@@ -39,4 +39,8 @@ Term Explanation
 ----------------
 - **Federated Learning** aims at generating a collaboratively trained global learning model without sharing the data owned by the distributed data sources
 
+
+Reference
+---------
 .. bibliography::
+   :filter: docname in docnames
