@@ -10,21 +10,26 @@ Before starting
 
 Before starting to read the paper, the basic concepts you need to know are as follows:
 
-* Entire ML pipeline
+* Entire ML pipeline process 
 * The participants in the ML pipeline
 
 
 Key Terms
 ^^^^^^^^^
 #. Privacy-preserving machine learning (PPML)
-#. Complete Model :math:`\rightarrow` Train on single machine
-#. Global Model :math:`\rightarrow` Train on multiple machines
+#. Complete Model :math:`\rightarrow` Train on **single** machine
+#. Global Model :math:`\rightarrow` Train on **multiple** machines
 #. Data Producer (DP)
 #. Model Consumer (MC)
 #. Computational Facility (CF)
 #. Confidential-level privacy
 #. Homomorphic encryption (HE)
 #. Functional encryption (FE)
+#. Differential privacy
+#. Multi-party computation (MPC)
+#. Secure multi-party computation (SMPC)
+#. Garbled circuit
+#. Oblivious transfer
 
 Contributions :cite:`xu2021privacy`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
