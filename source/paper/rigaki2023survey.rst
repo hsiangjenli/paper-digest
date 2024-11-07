@@ -46,3 +46,8 @@ Type of Machine learning architecture
    #. collaborative or federated learning (FL)
    #. fully decentralized or peer-to-peer (P2P) learning
    #. split learning
+
+References
+----------
+.. bibliography::
+    :filter: docname in docnames
