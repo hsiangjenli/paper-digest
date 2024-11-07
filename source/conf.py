@@ -32,14 +32,17 @@ class TitleRefRole(SphinxRole):
         node = nodes.raw(text=bibfiles[bib_id].fields['title'], format='html')
         return [node], []
 
-extensions = ['sphinxcontrib.bibtex', 'sphinx_add_text']
+extensions = ['sphinxcontrib.bibtex', 'sphinx_add_text', 'nbsphinx']
+
 bibtex_bibfiles = ['paper.bib']
 bibtex_default_style = 'unsrt'
 
+nbsphinx_execute = 'never'
+highlight_language = 'python3'
+pygments_style = 'sphinx'
+
 templates_path = ['_templates']
 exclude_patterns = []
-
-
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output

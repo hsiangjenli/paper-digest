@@ -2,3 +2,17 @@
 a {
     text-decoration: none!important;
 }
+
+.caption {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.bd-article-container h1, .bd-article-container h2, .bd-article-container h3, .bd-article-container h4, .bd-article-container h5, .bd-article-container p.caption {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.bd-article .toctree-l1 {
+    list-style-type: disc !important;
+    margin-left: 20px;
+}

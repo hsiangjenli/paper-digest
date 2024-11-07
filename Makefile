@@ -22,5 +22,10 @@ help:
 image:
 	docker buildx build --platform linux/amd64  -t hsiangjenli/sphinx-doc:paper-digest .github
 
+c:
+	sudo chmod -R 777 build
+	make clean
+	make run
+
 run:
 	docker run -it --rm -v "$(PWD):/docs" hsiangjenli/sphinx-doc:paper-digest make html

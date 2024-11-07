@@ -1,2 +1,5 @@
 sphinx-book-theme
 sphinxcontrib-bibtex
+nbsphinx
+pygments 
+ipython
