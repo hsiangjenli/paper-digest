@@ -12,3 +12,12 @@ Paper Digest
    :maxdepth: 1
 
    paper/*
+
+
+.. toctree:: 
+   :glob:
+   :caption: 🚀 PPML
+   :maxdepth: 1
+
+   resource/ppml
+   paper/xu2021privacy

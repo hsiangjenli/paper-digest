@@ -51,6 +51,7 @@
     <link rel="icon" href="https://hsiangjenli.github.io/static/image/ico.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Open Source Repositories for PPML" href="../resource/ppml.html" />
     <link rel="prev" title="Privacy-preserving machine learning: Methods, challenges and directions" href="xu2021privacy.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -147,6 +148,14 @@
 <li class="toctree-l1"><a class="reference internal" href="rodriguez2023survey.html">Survey on federated learning threats: Concepts, taxonomy on attacks and defences, experimental study and challenges</a></li>
 <li class="toctree-l1"><a class="reference internal" href="xu2021privacy.html">Privacy-preserving machine learning: Methods, challenges and directions</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">On hyperparameter optimization of machine learning algorithms: Theory and practice</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">🚀 PPML</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../resource/ppml.html">Open Source Repositories for PPML</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../resource/notebook/nb_tenseal.html">OpenMined/TenSEAL</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="xu2021privacy.html">Privacy-preserving machine learning: Methods, challenges and directions</a></li>
 </ul>
 
     </div>
@@ -313,8 +322,8 @@
     <p class="admonition-title">Note</p>
     <p>Hey guys, this is my personal reading note. I am not sure there might be some mistakes in my understanding. Please feel free to correct me (<a class="reference external" href="mailto:hsiangjenli&#37;&#52;&#48;gmail&#46;com">hsiangjenli<span>&#64;</span>gmail<span>&#46;</span>com</a>) if you find any. Thanks!</p>
 </div><ul class="simple">
-<li><p>Publish Year : <span id="id1"><a class="reference internal" href="#id16" title="Li Yang and Abdallah Shami. On hyperparameter optimization of machine learning algorithms: theory and practice. Neurocomputing, 415:295–316, 2020.">2020</a></span></p></li>
-<li><p>Authors : <span id="id2"><a class="reference internal" href="#id16" title="Li Yang and Abdallah Shami. On hyperparameter optimization of machine learning algorithms: theory and practice. Neurocomputing, 415:295–316, 2020.">Yang and Shami</a></span></p></li>
+<li><p>Publish Year : <span id="id1"><a class="reference internal" href="#id15" title="Li Yang and Abdallah Shami. On hyperparameter optimization of machine learning algorithms: theory and practice. Neurocomputing, 415:295–316, 2020.">2020</a></span></p></li>
+<li><p>Authors : <span id="id2"><a class="reference internal" href="#id15" title="Li Yang and Abdallah Shami. On hyperparameter optimization of machine learning algorithms: theory and practice. Neurocomputing, 415:295–316, 2020.">Yang and Shami</a></span></p></li>
 </ul>
 <section id="terms-explanation">
 <h2>Terms Explanation<a class="headerlink" href="#terms-explanation" title="Link to this heading">#</a></h2>
@@ -357,7 +366,7 @@
 <section id="problem-statement">
 <h3>Problem Statement<a class="headerlink" href="#problem-statement" title="Link to this heading">#</a></h3>
 <ul>
-<li><p>HPO problems are <strong>non-convex</strong> or <strong>non-differentiable</strong> optimization problems, which makes it difficult to find the global optimum <span id="id3">[<a class="reference internal" href="#id17" title="Gang Luo. A review of automatic selection methods for machine learning algorithms and hyper-parameter values. Network Modeling Analysis in Health Informatics and Bioinformatics, 5:1–16, 2016.">2</a>]</span></p>
+<li><p>HPO problems are <strong>non-convex</strong> or <strong>non-differentiable</strong> optimization problems, which makes it difficult to find the global optimum <span id="id3">[<a class="reference internal" href="#id16" title="Gang Luo. A review of automatic selection methods for machine learning algorithms and hyper-parameter values. Network Modeling Analysis in Health Informatics and Bioinformatics, 5:1–16, 2016.">2</a>]</span></p>
 <blockquote>
 <div><ol class="arabic simple">
 <li><p>Non-convex optimization problem（非凸優化問題）：</p>
@@ -394,12 +403,12 @@
 <li><p>Random search (RS)</p></li>
 </ul>
 </li>
-<li><p>Bayesian Optimization Models (BO) <span id="id4">[<a class="reference internal" href="#id18" title="Katharina Eggensperger, Matthias Feurer, Frank Hutter, James Bergstra, Jasper Snoek, Holger Hoos, Kevin Leyton-Brown, and others. Towards an empirical foundation for assessing bayesian optimization of hyperparameters. In NIPS workshop on Bayesian Optimization in Theory and Practice, volume 10, 1–5. 2013.">3</a>]</span></p>
+<li><p>Bayesian Optimization Models (BO) <span id="id4">[<a class="reference internal" href="#id17" title="Katharina Eggensperger, Matthias Feurer, Frank Hutter, James Bergstra, Jasper Snoek, Holger Hoos, Kevin Leyton-Brown, and others. Towards an empirical foundation for assessing bayesian optimization of hyperparameters. In NIPS workshop on Bayesian Optimization in Theory and Practice, volume 10, 1–5. 2013.">3</a>]</span></p>
 <ul>
 <li><p>Choose the next hyper-parameter value by using the results from previously tested values as a guide</p></li>
-<li><p>Can use various models as <strong>surrogate functions (代理函數)</strong> to estimate the distribution of the objective function <span id="id5">[<a class="reference internal" href="#id19" title="Katharina Eggensperger, Frank Hutter, Holger Hoos, and Kevin Leyton-Brown. Efficient benchmarking of hyperparameter optimizers via surrogates. In Proceedings of the AAAI conference on artificial intelligence, volume 29. 2015.">4</a>]</span></p>
+<li><p>Can use various models as <strong>surrogate functions (代理函數)</strong> to estimate the distribution of the objective function <span id="id5">[<a class="reference internal" href="#id18" title="Katharina Eggensperger, Frank Hutter, Holger Hoos, and Kevin Leyton-Brown. Efficient benchmarking of hyperparameter optimizers via surrogates. In Proceedings of the AAAI conference on artificial intelligence, volume 29. 2015.">4</a>]</span></p>
 <ul>
-<li><p>Gaussian process (GP), random forest (RF), and tree-structured Parzen estimators (TPE) models <span id="id6">[<a class="reference internal" href="#id19" title="Katharina Eggensperger, Frank Hutter, Holger Hoos, and Kevin Leyton-Brown. Efficient benchmarking of hyperparameter optimizers via surrogates. In Proceedings of the AAAI conference on artificial intelligence, volume 29. 2015.">4</a>]</span></p></li>
+<li><p>Gaussian process (GP), random forest (RF), and tree-structured Parzen estimators (TPE) models <span id="id6">[<a class="reference internal" href="#id18" title="Katharina Eggensperger, Frank Hutter, Holger Hoos, and Kevin Leyton-Brown. Efficient benchmarking of hyperparameter optimizers via surrogates. In Proceedings of the AAAI conference on artificial intelligence, volume 29. 2015.">4</a>]</span></p></li>
 </ul>
 </li>
 <li><p>Difficult to parallelize</p></li>
@@ -408,13 +417,13 @@
 <li><p>Multi-fidelity Optimization Techniques</p>
 <ul>
 <li><p>bandit-based algorithms</p></li>
-<li><p>Hyperband <span id="id7">[<a class="reference internal" href="#id20" title="Lisha Li, Kevin Jamieson, Giulia DeSalvo, Afshin Rostamizadeh, and Ameet Talwalkar. Hyperband: a novel bandit-based approach to hyperparameter optimization. Journal of Machine Learning Research, 18(185):1–52, 2018.">5</a>]</span>, which can be considered as an improvement of Random Search</p></li>
+<li><p>Hyperband <span id="id7">[<a class="reference internal" href="#id19" title="Lisha Li, Kevin Jamieson, Giulia DeSalvo, Afshin Rostamizadeh, and Ameet Talwalkar. Hyperband: a novel bandit-based approach to hyperparameter optimization. Journal of Machine Learning Research, 18(185):1–52, 2018.">5</a>]</span>, which can be considered as an improvement of Random Search</p></li>
 </ul>
 </li>
 <li><p>Metaheuristics Algorithms</p>
 <ul>
 <li><p>Genetic algorithms (GA)</p></li>
-<li><p>Particle swarm optimization (PSO) <span id="id8">[<a class="reference internal" href="#id21" title="Pablo Ribalta Lorenzo, Jakub Nalepa, Michal Kawulok, Luciano Sanchez Ramos, and José Ranilla Pastor. Particle swarm optimization for hyper-parameter selection in deep neural networks. In Proceedings of the genetic and evolutionary computation conference, 481–488. 2017.">6</a>]</span></p></li>
+<li><p>Particle swarm optimization (PSO) <span id="id8">[<a class="reference internal" href="#id20" title="Pablo Ribalta Lorenzo, Jakub Nalepa, Michal Kawulok, Luciano Sanchez Ramos, and José Ranilla Pastor. Particle swarm optimization for hyper-parameter selection in deep neural networks. In Proceedings of the genetic and evolutionary computation conference, 481–488. 2017.">6</a>]</span></p></li>
 <li><p>Computational complexity</p></li>
 </ul>
 </li>
@@ -425,7 +434,7 @@
 </section>
 <section id="mathematical-optimization-and-hyper-parameter-optimization-problems">
 <h2>Mathematical optimization and hyper-parameter optimization problems<a class="headerlink" href="#mathematical-optimization-and-hyper-parameter-optimization-problems" title="Link to this heading">#</a></h2>
-<p>Mathematical optimization is the process of finding the best solution from <strong>a set of available candidates</strong> to maximize or minimize the objective function <span id="id9">[<a class="reference internal" href="#id22" title="Shiliang Sun, Zehui Cao, Han Zhu, and Jing Zhao. A survey of optimization methods from a machine learning perspective. IEEE transactions on cybernetics, 50(8):3668–3681, 2019.">7</a>]</span></p>
+<p>Mathematical optimization is the process of finding the best solution from <strong>a set of available candidates</strong> to maximize or minimize the objective function <span id="id9">[<a class="reference internal" href="#id21" title="Shiliang Sun, Zehui Cao, Han Zhu, and Jing Zhao. A survey of optimization methods from a machine learning perspective. IEEE transactions on cybernetics, 50(8):3668–3681, 2019.">7</a>]</span></p>
 <p>optimization problems can be classified as</p>
 <ol class="arabic">
 <li><p>Unconstrained optimization</p>
@@ -434,7 +443,7 @@
 </li>
 <li><p>Constrained optimization</p>
 <ul class="simple">
-<li><p>The role of constraints is to limit the possible values of the optimal solution to certain areas of the search space, named the <strong>feasible region</strong> <span id="id10">[<a class="reference internal" href="#id23" title="Stephen P Bradley, Arnoldo C Hax, and Thomas L Magnanti. Applied mathematical programming. (No Title), 1977.">8</a>]</span></p></li>
+<li><p>The role of constraints is to limit the possible values of the optimal solution to certain areas of the search space, named the <strong>feasible region</strong> <span id="id10">[<a class="reference internal" href="#id22" title="Stephen P Bradley, Arnoldo C Hax, and Thomas L Magnanti. Applied mathematical programming. (No Title), 1977.">8</a>]</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(g_i(x)\)</span> : inequality constraints function</p></li>
 <li><p><span class="math notranslate nohighlight">\(h_i(x)\)</span> : equality constraints function</p></li>
 </ul>
@@ -445,37 +454,37 @@
 <h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
 <div class="docutils container" id="id11">
 <div role="list" class="citation-list">
-<div class="citation" id="id16" role="doc-biblioentry">
+<div class="citation" id="id15" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
 <span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>)</span>
 <p>Li Yang and Abdallah Shami. On hyperparameter optimization of machine learning algorithms: theory and practice. <em>Neurocomputing</em>, 415:295–316, 2020.</p>
 </div>
-<div class="citation" id="id17" role="doc-biblioentry">
+<div class="citation" id="id16" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
 <p>Gang Luo. A review of automatic selection methods for machine learning algorithms and hyper-parameter values. <em>Network Modeling Analysis in Health Informatics and Bioinformatics</em>, 5:1–16, 2016.</p>
 </div>
-<div class="citation" id="id18" role="doc-biblioentry">
+<div class="citation" id="id17" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">3</a><span class="fn-bracket">]</span></span>
 <p>Katharina Eggensperger, Matthias Feurer, Frank Hutter, James Bergstra, Jasper Snoek, Holger Hoos, Kevin Leyton-Brown, and others. Towards an empirical foundation for assessing bayesian optimization of hyperparameters. In <em>NIPS workshop on Bayesian Optimization in Theory and Practice</em>, volume 10, 1–5. 2013.</p>
 </div>
-<div class="citation" id="id19" role="doc-biblioentry">
+<div class="citation" id="id18" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></span>
 <span class="backrefs">(<a role="doc-backlink" href="#id5">1</a>,<a role="doc-backlink" href="#id6">2</a>)</span>
 <p>Katharina Eggensperger, Frank Hutter, Holger Hoos, and Kevin Leyton-Brown. Efficient benchmarking of hyperparameter optimizers via surrogates. In <em>Proceedings of the AAAI conference on artificial intelligence</em>, volume 29. 2015.</p>
 </div>
-<div class="citation" id="id20" role="doc-biblioentry">
+<div class="citation" id="id19" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">5</a><span class="fn-bracket">]</span></span>
 <p>Lisha Li, Kevin Jamieson, Giulia DeSalvo, Afshin Rostamizadeh, and Ameet Talwalkar. Hyperband: a novel bandit-based approach to hyperparameter optimization. <em>Journal of Machine Learning Research</em>, 18(185):1–52, 2018.</p>
 </div>
-<div class="citation" id="id21" role="doc-biblioentry">
+<div class="citation" id="id20" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">6</a><span class="fn-bracket">]</span></span>
 <p>Pablo Ribalta Lorenzo, Jakub Nalepa, Michal Kawulok, Luciano Sanchez Ramos, and José Ranilla Pastor. Particle swarm optimization for hyper-parameter selection in deep neural networks. In <em>Proceedings of the genetic and evolutionary computation conference</em>, 481–488. 2017.</p>
 </div>
-<div class="citation" id="id22" role="doc-biblioentry">
+<div class="citation" id="id21" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">7</a><span class="fn-bracket">]</span></span>
 <p>Shiliang Sun, Zehui Cao, Han Zhu, and Jing Zhao. A survey of optimization methods from a machine learning perspective. <em>IEEE transactions on cybernetics</em>, 50(8):3668–3681, 2019.</p>
 </div>
-<div class="citation" id="id23" role="doc-biblioentry">
+<div class="citation" id="id22" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">8</a><span class="fn-bracket">]</span></span>
 <p>Stephen P Bradley, Arnoldo C Hax, and Thomas L Magnanti. Applied mathematical programming. <em>(No Title)</em>, 1977.</p>
 </div>
@@ -503,6 +512,15 @@
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Privacy-preserving machine learning: Methods, challenges and directions</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="../resource/ppml.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Open Source Repositories for PPML</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>

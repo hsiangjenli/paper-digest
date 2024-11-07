@@ -7,9 +7,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta content="2024-09-01" name="date" />
 
-    <title>A survey of privacy attacks in machine learning &#8212; Paper Digest</title>
+    <title>Open Source Repositories for PPML &#8212; Paper Digest</title>
   
   
   
@@ -46,12 +45,14 @@
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'paper/rigaki2023survey';</script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'resource/ppml';</script>
     <link rel="icon" href="https://hsiangjenli.github.io/static/image/ico.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Survey on federated learning threats: Concepts, taxonomy on attacks and defences, experimental study and challenges" href="rodriguez2023survey.html" />
-    <link rel="prev" title="Paper Digest" href="../index.html" />
+    <link rel="next" title="OpenMined/TenSEAL" href="notebook/nb_tenseal.html" />
+    <link rel="prev" title="On hyperparameter optimization of machine learning algorithms: Theory and practice" href="../paper/yang2020hyperparameter.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -142,19 +143,19 @@
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of Contents:</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">A survey of privacy attacks in machine learning</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rodriguez2023survey.html">Survey on federated learning threats: Concepts, taxonomy on attacks and defences, experimental study and challenges</a></li>
-<li class="toctree-l1"><a class="reference internal" href="xu2021privacy.html">Privacy-preserving machine learning: Methods, challenges and directions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="yang2020hyperparameter.html">On hyperparameter optimization of machine learning algorithms: Theory and practice</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../paper/rigaki2023survey.html">A survey of privacy attacks in machine learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../paper/rodriguez2023survey.html">Survey on federated learning threats: Concepts, taxonomy on attacks and defences, experimental study and challenges</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../paper/xu2021privacy.html">Privacy-preserving machine learning: Methods, challenges and directions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../paper/yang2020hyperparameter.html">On hyperparameter optimization of machine learning algorithms: Theory and practice</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">🚀 PPML</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../resource/ppml.html">Open Source Repositories for PPML</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="../resource/notebook/nb_tenseal.html">OpenMined/TenSEAL</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Open Source Repositories for PPML</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="notebook/nb_tenseal.html">OpenMined/TenSEAL</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="xu2021privacy.html">Privacy-preserving machine learning: Methods, challenges and directions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../paper/xu2021privacy.html">Privacy-preserving machine learning: Methods, challenges and directions</a></li>
 </ul>
 
     </div>
@@ -209,7 +210,7 @@
       
       
       
-      <li><a href="../_sources/paper/rigaki2023survey.rst" target="_blank"
+      <li><a href="../_sources/resource/ppml.rst" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -285,7 +286,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>A survey of privacy attacks in machine learning</h1>
+    <h1>Open Source Repositories for PPML</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -295,8 +296,9 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-snippets">Code Snippets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homomorphic-encryption">Homomorphic Encryption</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#privacy-preserving-machine-learning-framework">Privacy Preserving Machine Learning framework</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
             </nav>
@@ -309,69 +311,40 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="a-survey-of-privacy-attacks-in-machine-learning">
-<h1>A survey of privacy attacks in machine learning<a class="headerlink" href="#a-survey-of-privacy-attacks-in-machine-learning" title="Link to this heading">#</a></h1>
+  <section id="open-source-repositories-for-ppml">
+<h1>Open Source Repositories for PPML<a class="headerlink" href="#open-source-repositories-for-ppml" title="Link to this heading">#</a></h1>
 <div class="admonition note">
     <p class="admonition-title">Note</p>
     <p>Hey guys, this is my personal reading note. I am not sure there might be some mistakes in my understanding. Please feel free to correct me (<a class="reference external" href="mailto:hsiangjenli&#37;&#52;&#48;gmail&#46;com">hsiangjenli<span>&#64;</span>gmail<span>&#46;</span>com</a>) if you find any. Thanks!</p>
-</div><ul class="simple">
-<li><p>Publish Year : <span id="id1"><a class="reference internal" href="#id35" title="Maria Rigaki and Sebastian Garcia. A survey of privacy attacks in machine learning. ACM Computing Surveys, 56(4):1–34, 2023.">2023</a></span></p></li>
-<li><p>Authors : <span id="id2"><a class="reference internal" href="#id35" title="Maria Rigaki and Sebastian Garcia. A survey of privacy attacks in machine learning. ACM Computing Surveys, 56(4):1–34, 2023.">Rigaki and Garcia</a></span></p></li>
+</div><section id="code-snippets">
+<h2>Code Snippets<a class="headerlink" href="#code-snippets" title="Link to this heading">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="notebook/nb_tenseal.html">OpenMined/TenSEAL</a></li>
 </ul>
-<section id="abstract">
-<h2>Abstract<a class="headerlink" href="#abstract" title="Link to this heading">#</a></h2>
+</div>
+</section>
+<section id="homomorphic-encryption">
+<h2>Homomorphic Encryption<a class="headerlink" href="#homomorphic-encryption" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Analysis of more than 45 papers related to privacy attacks against machine learning</p></li>
-<li><p>Attack taxonomy (focus on privacy and confidentiality attacks)</p></li>
-<li><p>Exploration of the causes of privacy leaks</p></li>
-<li><p>The most common defenses methods, open problems and future directions</p></li>
-<li><p>Implementation of the attacks</p></li>
+<li><p><a class="github reference external" href="https://github.com/jonaschn/awesome-he">jonaschn/awesome-he</a></p></li>
+<li><p><a class="github reference external" href="https://github.com/serengil/LightPHE">serengil/LightPHE</a></p></li>
+<li><p><a class="github reference external" href="https://github.com/OpenMined/TenSEAL">OpenMined/TenSEAL</a> <span id="id1">[<a class="reference internal" href="#id35" title="Ayoub Benaissa, Bilal Retiat, Bogdan Cebere, and Alaa Eddine Belfedhal. Tenseal: a library for encrypted tensor operations using homomorphic encryption. 2021. arXiv:2104.03152.">1</a>]</span></p></li>
 </ul>
 </section>
-<section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
-<p>How models leaks information</p>
-<ol class="arabic simple">
-<li><p>The way of constructing models</p>
+<section id="privacy-preserving-machine-learning-framework">
+<h2>Privacy Preserving Machine Learning framework<a class="headerlink" href="#privacy-preserving-machine-learning-framework" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>For example, adversarial robustness (make the model can defenses against adversarial examples) can leak information about the training data</p></li>
-<li><p>Because the modelmay overfitting to the training data, which means the model already memorized the training data</p></li>
-</ul>
-</li>
-<li><p>Poor generalization and memorization of sensitive data samples</p></li>
-</ol>
-<p>three types of attacks on machine learning systems:</p>
-<ol class="arabic simple">
-<li><p>attacks against integrity - 完整性攻擊
-- 攻擊 input data，讓模型做出錯誤決策</p></li>
-<li><p>attacks against a system’s availability
-- Maximize the misclassification error</p></li>
-<li><p>attacks against privacy and confidentiality !!!
-- try to infer information about user data and models
-- 試圖推理出 data 的資訊或是模型的敏感訊息</p></li>
-</ol>
-<p>Type of Machine learning architecture</p>
-<ul class="simple">
-<li><p>Centralized Learning</p></li>
-<li><dl class="simple">
-<dt>Distributed Learning</dt><dd><ol class="arabic simple">
-<li><p>collaborative or federated learning (FL)</p></li>
-<li><p>fully decentralized or peer-to-peer (P2P) learning</p></li>
-<li><p>split learning</p></li>
-</ol>
-</dd>
-</dl>
-</li>
+<li><p><a class="github reference external" href="https://github.com/facebookresearch/CrypTen">facebookresearch/CrypTen</a></p></li>
 </ul>
 </section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
-<div class="docutils container" id="id3">
+<div class="docutils container" id="id2">
 <div role="list" class="citation-list">
 <div class="citation" id="id35" role="doc-biblioentry">
-<span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
-<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>)</span>
-<p>Maria Rigaki and Sebastian Garcia. A survey of privacy attacks in machine learning. <em>ACM Computing Surveys</em>, 56(4):1–34, 2023.</p>
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Ayoub Benaissa, Bilal Retiat, Bogdan Cebere, and Alaa Eddine Belfedhal. Tenseal: a library for encrypted tensor operations using homomorphic encryption. 2021. <a class="reference external" href="https://arxiv.org/abs/2104.03152">arXiv:2104.03152</a>.</p>
 </div>
 </div>
 </div>
@@ -390,20 +363,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../index.html"
+       href="../paper/yang2020hyperparameter.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Paper Digest</p>
+        <p class="prev-next-title">On hyperparameter optimization of machine learning algorithms: Theory and practice</p>
       </div>
     </a>
     <a class="right-next"
-       href="rodriguez2023survey.html"
+       href="notebook/nb_tenseal.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Survey on federated learning threats: Concepts, taxonomy on attacks and defences, experimental study and challenges</p>
+        <p class="prev-next-title">OpenMined/TenSEAL</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -424,8 +397,9 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#code-snippets">Code Snippets</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#homomorphic-encryption">Homomorphic Encryption</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#privacy-preserving-machine-learning-framework">Privacy Preserving Machine Learning framework</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
   </nav></div>

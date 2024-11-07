@@ -149,6 +149,14 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Privacy-preserving machine learning: Methods, challenges and directions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="yang2020hyperparameter.html">On hyperparameter optimization of machine learning algorithms: Theory and practice</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">🚀 PPML</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../resource/ppml.html">Open Source Repositories for PPML</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../resource/notebook/nb_tenseal.html">OpenMined/TenSEAL</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Privacy-preserving machine learning: Methods, challenges and directions</a></li>
+</ul>
 
     </div>
 </nav></div>
@@ -318,8 +326,8 @@
     <p class="admonition-title">Note</p>
     <p>Hey guys, this is my personal reading note. I am not sure there might be some mistakes in my understanding. Please feel free to correct me (<a class="reference external" href="mailto:hsiangjenli&#37;&#52;&#48;gmail&#46;com">hsiangjenli<span>&#64;</span>gmail<span>&#46;</span>com</a>) if you find any. Thanks!</p>
 </div><ul class="simple">
-<li><p>Publish Year : <span id="id1"><a class="reference internal" href="#id37" title="Runhua Xu, Nathalie Baracaldo, and James Joshi. Privacy-preserving machine learning: methods, challenges and directions. arXiv preprint arXiv:2108.04417, 2021.">2021</a></span></p></li>
-<li><p>Authors : <span id="id2"><a class="reference internal" href="#id37" title="Runhua Xu, Nathalie Baracaldo, and James Joshi. Privacy-preserving machine learning: methods, challenges and directions. arXiv preprint arXiv:2108.04417, 2021.">Xu, Baracaldo, and Joshi</a></span></p></li>
+<li><p>Publish Year : <span id="id1"><a class="reference internal" href="#id36" title="Runhua Xu, Nathalie Baracaldo, and James Joshi. Privacy-preserving machine learning: methods, challenges and directions. arXiv preprint arXiv:2108.04417, 2021.">2021</a></span></p></li>
+<li><p>Authors : <span id="id2"><a class="reference internal" href="#id36" title="Runhua Xu, Nathalie Baracaldo, and James Joshi. Privacy-preserving machine learning: methods, challenges and directions. arXiv preprint arXiv:2108.04417, 2021.">Xu, Baracaldo, and Joshi</a></span></p></li>
 </ul>
 <section id="before-starting">
 <h2>Before starting<a class="headerlink" href="#before-starting" title="Link to this heading">#</a></h2>
@@ -348,7 +356,7 @@
 </ol>
 </section>
 <section id="contributions-xu2021privacy">
-<h3>Contributions <span id="id3">[<a class="reference internal" href="#id37" title="Runhua Xu, Nathalie Baracaldo, and James Joshi. Privacy-preserving machine learning: methods, challenges and directions. arXiv preprint arXiv:2108.04417, 2021.">1</a>]</span><a class="headerlink" href="#contributions-xu2021privacy" title="Link to this heading">#</a></h3>
+<h3>Contributions <span id="id3">[<a class="reference internal" href="#id36" title="Runhua Xu, Nathalie Baracaldo, and James Joshi. Privacy-preserving machine learning: methods, challenges and directions. arXiv preprint arXiv:2108.04417, 2021.">1</a>]</span><a class="headerlink" href="#contributions-xu2021privacy" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Existing privacy preserving approaches</p></li>
 <li><p>Proposed an evaluation framework for PPML, which decomposes privacy-preserving features into distinct Phase, Guarantee, and Utility aspects (PGU).</p></li>
@@ -367,14 +375,14 @@
 <h2>Phases of ML Pipeline<a class="headerlink" href="#phases-of-ml-pipeline" title="Link to this heading">#</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li><p>The techniques that can be applied to training phase, it also can be applied to the serving phase. <span id="id4">[<a class="reference internal" href="#id37" title="Runhua Xu, Nathalie Baracaldo, and James Joshi. Privacy-preserving machine learning: methods, challenges and directions. arXiv preprint arXiv:2108.04417, 2021.">1</a>]</span></p></li>
-<li><p>However, the techniques that can be applied to the serving phase, it may not be applied to the training phase. <span id="id5">[<a class="reference internal" href="#id37" title="Runhua Xu, Nathalie Baracaldo, and James Joshi. Privacy-preserving machine learning: methods, challenges and directions. arXiv preprint arXiv:2108.04417, 2021.">1</a>]</span></p></li>
+<li><p>The techniques that can be applied to training phase, it also can be applied to the serving phase. <span id="id4">[<a class="reference internal" href="#id36" title="Runhua Xu, Nathalie Baracaldo, and James Joshi. Privacy-preserving machine learning: methods, challenges and directions. arXiv preprint arXiv:2108.04417, 2021.">1</a>]</span></p></li>
+<li><p>However, the techniques that can be applied to the serving phase, it may not be applied to the training phase. <span id="id5">[<a class="reference internal" href="#id36" title="Runhua Xu, Nathalie Baracaldo, and James Joshi. Privacy-preserving machine learning: methods, challenges and directions. arXiv preprint arXiv:2108.04417, 2021.">1</a>]</span></p></li>
 </ul>
 </div></blockquote>
-<figure class="align-default" id="id56">
+<figure class="align-default" id="id58">
 <img alt="../_images/image.png" src="../_images/image.png" />
 <figcaption>
-<p><span class="caption-text">This figure is taken from the paper <span id="id6">[<a class="reference internal" href="#id37" title="Runhua Xu, Nathalie Baracaldo, and James Joshi. Privacy-preserving machine learning: methods, challenges and directions. arXiv preprint arXiv:2108.04417, 2021.">1</a>]</span></span><a class="headerlink" href="#id56" title="Link to this image">#</a></p>
+<p><span class="caption-text">This figure is taken from the paper <span id="id6">[<a class="reference internal" href="#id36" title="Runhua Xu, Nathalie Baracaldo, and James Joshi. Privacy-preserving machine learning: methods, challenges and directions. arXiv preprint arXiv:2108.04417, 2021.">1</a>]</span></span><a class="headerlink" href="#id58" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 <section id="privacy-preserving-data-preparation-data-perspective">
@@ -382,20 +390,20 @@
 <ol class="arabic simple">
 <li><p><strong>Traditional anonymization mechanism</strong> : Remove the identifier information before training</p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(k\)</span>-anonymity <span id="id7">[<a class="reference internal" href="#id38" title="Latanya Sweeney. K-anonymity: a model for protecting privacy. International journal of uncertainty, fuzziness and knowledge-based systems, 10(05):557–570, 2002.">2</a>]</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(l\)</span>-diversity <span id="id8">[<a class="reference internal" href="#id39" title="Ashwin Machanavajjhala, Daniel Kifer, Johannes Gehrke, and Muthuramakrishnan Venkitasubramaniam. L-diversity: privacy beyond k-anonymity. Acm transactions on knowledge discovery from data (tkdd), 1(1):3–es, 2007.">3</a>]</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(t\)</span>-closeness <span id="id9">[<a class="reference internal" href="#id40" title="Ninghui Li, Tiancheng Li, and Suresh Venkatasubramanian. T-closeness: privacy beyond k-anonymity and l-diversity. In 2007 IEEE 23rd international conference on data engineering, 106–115. IEEE, 2006.">4</a>]</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(k\)</span>-anonymity <span id="id7">[<a class="reference internal" href="#id37" title="Latanya Sweeney. K-anonymity: a model for protecting privacy. International journal of uncertainty, fuzziness and knowledge-based systems, 10(05):557–570, 2002.">2</a>]</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(l\)</span>-diversity <span id="id8">[<a class="reference internal" href="#id38" title="Ashwin Machanavajjhala, Daniel Kifer, Johannes Gehrke, and Muthuramakrishnan Venkitasubramaniam. L-diversity: privacy beyond k-anonymity. Acm transactions on knowledge discovery from data (tkdd), 1(1):3–es, 2007.">3</a>]</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(t\)</span>-closeness <span id="id9">[<a class="reference internal" href="#id39" title="Ninghui Li, Tiancheng Li, and Suresh Venkatasubramanian. T-closeness: privacy beyond k-anonymity and l-diversity. In 2007 IEEE 23rd international conference on data engineering, 106–115. IEEE, 2006.">4</a>]</span></p></li>
 </ul>
 </li>
 <li><p><strong>Surrogate dataset</strong></p>
 <ul class="simple">
-<li><p>Grouping the anonymized data <span id="id10">[<a class="reference internal" href="#id41" title="Mengwei Yang, Linqi Song, Jie Xu, Congduan Li, and Guozhen Tan. The tradeoff between privacy and accuracy in anomaly detection using federated xgboost. arXiv preprint arXiv:1907.07157, 2019.">5</a>]</span></p></li>
-<li><p>Abstracting the data by sketch techniques <span id="id11">[<a class="reference internal" href="#id45" title="Tian Li, Zaoxing Liu, Vyas Sekar, and Virginia Smith. Privacy for free: communication-efficient learning with differential privacy using sketches. arXiv preprint arXiv:1911.00972, 2019.">6</a>, <a class="reference internal" href="#id46" title="Farzin Haddadpour, Belhal Karimi, Ping Li, and Xiaoyun Li. Fedsketch: communication-efficient and private federated learning via sketching. arXiv preprint arXiv:2008.04975, 2020.">7</a>]</span></p></li>
+<li><p>Grouping the anonymized data <span id="id10">[<a class="reference internal" href="#id40" title="Mengwei Yang, Linqi Song, Jie Xu, Congduan Li, and Guozhen Tan. The tradeoff between privacy and accuracy in anomaly detection using federated xgboost. arXiv preprint arXiv:1907.07157, 2019.">5</a>]</span></p></li>
+<li><p>Abstracting the data by sketch techniques <span id="id11">[<a class="reference internal" href="#id44" title="Tian Li, Zaoxing Liu, Vyas Sekar, and Virginia Smith. Privacy for free: communication-efficient learning with differential privacy using sketches. arXiv preprint arXiv:1911.00972, 2019.">6</a>, <a class="reference internal" href="#id45" title="Farzin Haddadpour, Belhal Karimi, Ping Li, and Xiaoyun Li. Fedsketch: communication-efficient and private federated learning via sketching. arXiv preprint arXiv:2008.04975, 2020.">7</a>]</span></p></li>
 </ul>
 </li>
-<li><p><strong>Differential privacy mechanism</strong> <span id="id12">[<a class="reference internal" href="#id42" title="Cynthia Dwork. Differential privacy: a survey of results. In International conference on theory and applications of models of computation, 1–19. Springer, 2008.">8</a>, <a class="reference internal" href="#id43" title="Cynthia Dwork, Guy N Rothblum, and Salil Vadhan. Boosting and differential privacy. In 2010 IEEE 51st annual symposium on foundations of computer science, 51–60. IEEE, 2010.">9</a>, <a class="reference internal" href="#id44" title="Cynthia Dwork, Aaron Roth, and others. The algorithmic foundations of differential privacy. Foundations and Trends® in Theoretical Computer Science, 9(3–4):211–407, 2014.">10</a>]</span> : Add noise to the data to avoid privacy leakage</p>
+<li><p><strong>Differential privacy mechanism</strong> <span id="id12">[<a class="reference internal" href="#id41" title="Cynthia Dwork. Differential privacy: a survey of results. In International conference on theory and applications of models of computation, 1–19. Springer, 2008.">8</a>, <a class="reference internal" href="#id42" title="Cynthia Dwork, Guy N Rothblum, and Salil Vadhan. Boosting and differential privacy. In 2010 IEEE 51st annual symposium on foundations of computer science, 51–60. IEEE, 2010.">9</a>, <a class="reference internal" href="#id43" title="Cynthia Dwork, Aaron Roth, and others. The algorithmic foundations of differential privacy. Foundations and Trends® in Theoretical Computer Science, 9(3–4):211–407, 2014.">10</a>]</span> : Add noise to the data to avoid privacy leakage</p>
 <ul class="simple">
-<li><p>Inference or de-anonymization attacks <span id="id13">[<a class="reference internal" href="#id37" title="Runhua Xu, Nathalie Baracaldo, and James Joshi. Privacy-preserving machine learning: methods, challenges and directions. arXiv preprint arXiv:2108.04417, 2021.">1</a>]</span> : Like <span id="id14">[<a class="reference internal" href="#id47" title="Gilbert Wondracek, Thorsten Holz, Engin Kirda, and Christopher Kruegel. A practical attack to de-anonymize social network users. In 2010 ieee symposium on security and privacy, 223–238. IEEE, 2010.">11</a>, <a class="reference internal" href="#id48" title="Md Atiqur Rahman, Tanzila Rahman, Robert Laganière, Noman Mohammed, and Yang Wang. Membership inference attack against differentially private deep learning model. Trans. Data Priv., 11(1):61–79, 2018.">12</a>, <a class="reference internal" href="#id49" title="Reza Shokri, Marco Stronati, Congzheng Song, and Vitaly Shmatikov. Membership inference attacks against machine learning models. In 2017 IEEE symposium on security and privacy (SP), 3–18. IEEE, 2017.">13</a>, <a class="reference internal" href="#id50" title="Jianwei Qian, Xiang-Yang Li, Chunhong Zhang, and Linlin Chen. De-anonymizing social networks and inferring private attributes using knowledge graphs. In IEEE INFOCOM 2016-The 35th Annual IEEE International Conference on Computer Communications, 1–9. IEEE, 2016.">14</a>]</span></p></li>
+<li><p>Inference or de-anonymization attacks <span id="id13">[<a class="reference internal" href="#id36" title="Runhua Xu, Nathalie Baracaldo, and James Joshi. Privacy-preserving machine learning: methods, challenges and directions. arXiv preprint arXiv:2108.04417, 2021.">1</a>]</span> : Like <span id="id14">[<a class="reference internal" href="#id46" title="Gilbert Wondracek, Thorsten Holz, Engin Kirda, and Christopher Kruegel. A practical attack to de-anonymize social network users. In 2010 ieee symposium on security and privacy, 223–238. IEEE, 2010.">11</a>, <a class="reference internal" href="#id47" title="Md Atiqur Rahman, Tanzila Rahman, Robert Laganière, Noman Mohammed, and Yang Wang. Membership inference attack against differentially private deep learning model. Trans. Data Priv., 11(1):61–79, 2018.">12</a>, <a class="reference internal" href="#id48" title="Reza Shokri, Marco Stronati, Congzheng Song, and Vitaly Shmatikov. Membership inference attacks against machine learning models. In 2017 IEEE symposium on security and privacy (SP), 3–18. IEEE, 2017.">13</a>, <a class="reference internal" href="#id49" title="Jianwei Qian, Xiang-Yang Li, Chunhong Zhang, and Linlin Chen. De-anonymizing social networks and inferring private attributes using knowledge graphs. In IEEE INFOCOM 2016-The 35th Annual IEEE International Conference on Computer Communications, 1–9. IEEE, 2016.">14</a>]</span></p></li>
 </ul>
 </li>
 <li><p><strong>Encrypted data</strong></p>
@@ -407,7 +415,7 @@
 </section>
 <section id="privacy-preserving-model-training-computational-perspective">
 <h3>Privacy Preserving Model Training (Computational Perspective)<a class="headerlink" href="#privacy-preserving-model-training-computational-perspective" title="Link to this heading">#</a></h3>
-<p>Supporting computation on encrypted data <span id="id15">[<a class="reference internal" href="#id37" title="Runhua Xu, Nathalie Baracaldo, and James Joshi. Privacy-preserving machine learning: methods, challenges and directions. arXiv preprint arXiv:2108.04417, 2021.">1</a>]</span>. Typically, encryption techniques involve two main steps: encoding and decoding <span id="id16">[<a class="reference internal" href="#id37" title="Runhua Xu, Nathalie Baracaldo, and James Joshi. Privacy-preserving machine learning: methods, challenges and directions. arXiv preprint arXiv:2108.04417, 2021.">1</a>]</span>.</p>
+<p>Supporting computation on encrypted data <span id="id15">[<a class="reference internal" href="#id36" title="Runhua Xu, Nathalie Baracaldo, and James Joshi. Privacy-preserving machine learning: methods, challenges and directions. arXiv preprint arXiv:2108.04417, 2021.">1</a>]</span>. Typically, encryption techniques involve two main steps: encoding and decoding <span id="id16">[<a class="reference internal" href="#id36" title="Runhua Xu, Nathalie Baracaldo, and James Joshi. Privacy-preserving machine learning: methods, challenges and directions. arXiv preprint arXiv:2108.04417, 2021.">1</a>]</span>.</p>
 <ul class="simple">
 <li><p>Encoding <span class="math notranslate nohighlight">\(\rightarrow\)</span> Transform floating-point values into integers</p></li>
 <li><p>Decoding <span class="math notranslate nohighlight">\(\rightarrow\)</span> Recover the floating-point values from trained model or crypto-based training results</p></li>
@@ -415,20 +423,20 @@
 <ol class="arabic simple">
 <li><p><strong>Homomorphic encryption</strong> :</p>
 <ul class="simple">
-<li><p>BGV scheme <span id="id17">[<a class="reference internal" href="#id54" title="Masahiro Yagisawa. Fully homomorphic encryption without bootstrapping. Cryptology ePrint Archive, 2015.">15</a>]</span></p></li>
-<li><p>CKKS <span id="id18">[<a class="reference internal" href="#id51" title="Jung Hee Cheon, Andrey Kim, Miran Kim, and Yongsoo Song. Homomorphic encryption for arithmetic of approximate numbers. In Advances in Cryptology–ASIACRYPT 2017: 23rd International Conference on the Theory and Applications of Cryptology and Information Security, Hong Kong, China, December 3-7, 2017, Proceedings, Part I 23, 409–437. Springer, 2017.">16</a>]</span> : Supports approximate arithmetic computation</p></li>
+<li><p>BGV scheme <span id="id17">[<a class="reference internal" href="#id53" title="Masahiro Yagisawa. Fully homomorphic encryption without bootstrapping. Cryptology ePrint Archive, 2015.">15</a>]</span></p></li>
+<li><p>CKKS <span id="id18">[<a class="reference internal" href="#id50" title="Jung Hee Cheon, Andrey Kim, Miran Kim, and Yongsoo Song. Homomorphic encryption for arithmetic of approximate numbers. In Advances in Cryptology–ASIACRYPT 2017: 23rd International Conference on the Theory and Applications of Cryptology and Information Security, Hong Kong, China, December 3-7, 2017, Proceedings, Part I 23, 409–437. Springer, 2017.">16</a>]</span> : Supports approximate arithmetic computation</p></li>
 </ul>
 </li>
 <li><p><strong>Functional encryption</strong> :</p>
 <ul class="simple">
-<li><p>Multi-party functional encryption <span id="id19">[<a class="reference internal" href="#id52" title="Michel Abdalla, Florian Bourse, Angelo De Caro, and David Pointcheval. Simple functional encryption schemes for inner products. In IACR International Workshop on Public Key Cryptography, 733–751. Springer, 2015.">17</a>, <a class="reference internal" href="#id53" title="Michel Abdalla, Dario Catalano, Dario Fiore, Romain Gay, and Bogdan Ursu. Multi-input functional encryption for inner products: function-hiding realizations and constructions without pairings. In Advances in Cryptology–CRYPTO 2018: 38th Annual International Cryptology Conference, Santa Barbara, CA, USA, August 19–23, 2018, Proceedings, Part I 38, 597–627. Springer, 2018.">18</a>]</span></p></li>
+<li><p>Multi-party functional encryption <span id="id19">[<a class="reference internal" href="#id51" title="Michel Abdalla, Florian Bourse, Angelo De Caro, and David Pointcheval. Simple functional encryption schemes for inner products. In IACR International Workshop on Public Key Cryptography, 733–751. Springer, 2015.">17</a>, <a class="reference internal" href="#id52" title="Michel Abdalla, Dario Catalano, Dario Fiore, Romain Gay, and Bogdan Ursu. Multi-input functional encryption for inner products: function-hiding realizations and constructions without pairings. In Advances in Cryptology–CRYPTO 2018: 38th Annual International Cryptology Conference, Santa Barbara, CA, USA, August 19–23, 2018, Proceedings, Part I 38, 597–627. Springer, 2018.">18</a>]</span></p></li>
 </ul>
 </li>
 </ol>
 </section>
 <section id="privacy-preserving-model-serving-model-perspective">
 <h3>Privacy Preserving Model Serving (Model Perspective)<a class="headerlink" href="#privacy-preserving-model-serving-model-perspective" title="Link to this heading">#</a></h3>
-<p>Include model deployment and inference <span id="id20">[<a class="reference internal" href="#id37" title="Runhua Xu, Nathalie Baracaldo, and James Joshi. Privacy-preserving machine learning: methods, challenges and directions. arXiv preprint arXiv:2108.04417, 2021.">1</a>]</span></p>
+<p>Include model deployment and inference <span id="id20">[<a class="reference internal" href="#id36" title="Runhua Xu, Nathalie Baracaldo, and James Joshi. Privacy-preserving machine learning: methods, challenges and directions. arXiv preprint arXiv:2108.04417, 2021.">1</a>]</span></p>
 <ol class="arabic simple">
 <li><p>Private aggregation of teacher ensembles (PATE)</p></li>
 <li><p>Model transform</p></li>
@@ -441,7 +449,7 @@
 <ol class="arabic">
 <li><p>Object-Oriented Privacy Guarantee</p>
 <ul>
-<li><p><strong>Data</strong> oriented privacy guarantee : Prevent the leakage of data, but it will sacrifice of the data utility <span id="id21">[<a class="reference internal" href="#id37" title="Runhua Xu, Nathalie Baracaldo, and James Joshi. Privacy-preserving machine learning: methods, challenges and directions. arXiv preprint arXiv:2108.04417, 2021.">1</a>]</span></p>
+<li><p><strong>Data</strong> oriented privacy guarantee : Prevent the leakage of data, but it will sacrifice of the data utility <span id="id21">[<a class="reference internal" href="#id36" title="Runhua Xu, Nathalie Baracaldo, and James Joshi. Privacy-preserving machine learning: methods, challenges and directions. arXiv preprint arXiv:2108.04417, 2021.">1</a>]</span></p>
 <blockquote>
 <div><ul class="simple">
 <li><p><strong>Anonymization mechanism</strong> needs to aggregate and remove proper feature values. Simultaneously, certain values of quasi-identifier features are erased altogether</p></li>
@@ -450,13 +458,13 @@
 </ul>
 </div></blockquote>
 </li>
-<li><p><strong>Model</strong> oriented privacy guarantee : Prevent adversaries from extracting private information through repeated model queries <span id="id22">[<a class="reference internal" href="#id37" title="Runhua Xu, Nathalie Baracaldo, and James Joshi. Privacy-preserving machine learning: methods, challenges and directions. arXiv preprint arXiv:2108.04417, 2021.">1</a>]</span></p>
+<li><p><strong>Model</strong> oriented privacy guarantee : Prevent adversaries from extracting private information through repeated model queries <span id="id22">[<a class="reference internal" href="#id36" title="Runhua Xu, Nathalie Baracaldo, and James Joshi. Privacy-preserving machine learning: methods, challenges and directions. arXiv preprint arXiv:2108.04417, 2021.">1</a>]</span></p>
 <blockquote>
 <div><ul>
 <li><p>Perturb the trained model</p>
 <blockquote>
 <div><ul class="simple">
-<li><p><strong>DP-SGD</strong> <span id="id23">[<a class="reference internal" href="#id55" title="Martin Abadi, Andy Chu, Ian Goodfellow, H Brendan McMahan, Ilya Mironov, Kunal Talwar, and Li Zhang. Deep learning with differential privacy. In Proceedings of the 2016 ACM SIGSAC conference on computer and communications security, 308–318. 2016.">19</a>]</span> : Adding noise into the clipped gradients to achieve a differentially private model</p></li>
+<li><p><strong>DP-SGD</strong> <span id="id23">[<a class="reference internal" href="#id54" title="Martin Abadi, Andy Chu, Ian Goodfellow, H Brendan McMahan, Ilya Mironov, Kunal Talwar, and Li Zhang. Deep learning with differential privacy. In Proceedings of the 2016 ACM SIGSAC conference on computer and communications security, 308–318. 2016.">19</a>]</span> : Adding noise into the clipped gradients to achieve a differentially private model</p></li>
 </ul>
 </div></blockquote>
 </li>
@@ -473,80 +481,80 @@
 <h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
 <div class="docutils container" id="id24">
 <div role="list" class="citation-list">
-<div class="citation" id="id37" role="doc-biblioentry">
+<div class="citation" id="id36" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
 <span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>,<a role="doc-backlink" href="#id3">3</a>,<a role="doc-backlink" href="#id4">4</a>,<a role="doc-backlink" href="#id5">5</a>,<a role="doc-backlink" href="#id6">6</a>,<a role="doc-backlink" href="#id13">7</a>,<a role="doc-backlink" href="#id15">8</a>,<a role="doc-backlink" href="#id16">9</a>,<a role="doc-backlink" href="#id20">10</a>,<a role="doc-backlink" href="#id21">11</a>,<a role="doc-backlink" href="#id22">12</a>)</span>
 <p>Runhua Xu, Nathalie Baracaldo, and James Joshi. Privacy-preserving machine learning: methods, challenges and directions. <em>arXiv preprint arXiv:2108.04417</em>, 2021.</p>
 </div>
-<div class="citation" id="id38" role="doc-biblioentry">
+<div class="citation" id="id37" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">2</a><span class="fn-bracket">]</span></span>
 <p>Latanya Sweeney. K-anonymity: a model for protecting privacy. <em>International journal of uncertainty, fuzziness and knowledge-based systems</em>, 10(05):557–570, 2002.</p>
 </div>
-<div class="citation" id="id39" role="doc-biblioentry">
+<div class="citation" id="id38" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">3</a><span class="fn-bracket">]</span></span>
 <p>Ashwin Machanavajjhala, Daniel Kifer, Johannes Gehrke, and Muthuramakrishnan Venkitasubramaniam. L-diversity: privacy beyond k-anonymity. <em>Acm transactions on knowledge discovery from data (tkdd)</em>, 1(1):3–es, 2007.</p>
 </div>
-<div class="citation" id="id40" role="doc-biblioentry">
+<div class="citation" id="id39" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">4</a><span class="fn-bracket">]</span></span>
 <p>Ninghui Li, Tiancheng Li, and Suresh Venkatasubramanian. T-closeness: privacy beyond k-anonymity and l-diversity. In <em>2007 IEEE 23rd international conference on data engineering</em>, 106–115. IEEE, 2006.</p>
 </div>
-<div class="citation" id="id41" role="doc-biblioentry">
+<div class="citation" id="id40" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">5</a><span class="fn-bracket">]</span></span>
 <p>Mengwei Yang, Linqi Song, Jie Xu, Congduan Li, and Guozhen Tan. The tradeoff between privacy and accuracy in anomaly detection using federated xgboost. <em>arXiv preprint arXiv:1907.07157</em>, 2019.</p>
 </div>
-<div class="citation" id="id45" role="doc-biblioentry">
+<div class="citation" id="id44" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">6</a><span class="fn-bracket">]</span></span>
 <p>Tian Li, Zaoxing Liu, Vyas Sekar, and Virginia Smith. Privacy for free: communication-efficient learning with differential privacy using sketches. <em>arXiv preprint arXiv:1911.00972</em>, 2019.</p>
 </div>
-<div class="citation" id="id46" role="doc-biblioentry">
+<div class="citation" id="id45" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id11">7</a><span class="fn-bracket">]</span></span>
 <p>Farzin Haddadpour, Belhal Karimi, Ping Li, and Xiaoyun Li. Fedsketch: communication-efficient and private federated learning via sketching. <em>arXiv preprint arXiv:2008.04975</em>, 2020.</p>
 </div>
-<div class="citation" id="id42" role="doc-biblioentry">
+<div class="citation" id="id41" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id12">8</a><span class="fn-bracket">]</span></span>
 <p>Cynthia Dwork. Differential privacy: a survey of results. In <em>International conference on theory and applications of models of computation</em>, 1–19. Springer, 2008.</p>
 </div>
-<div class="citation" id="id43" role="doc-biblioentry">
+<div class="citation" id="id42" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id12">9</a><span class="fn-bracket">]</span></span>
 <p>Cynthia Dwork, Guy N Rothblum, and Salil Vadhan. Boosting and differential privacy. In <em>2010 IEEE 51st annual symposium on foundations of computer science</em>, 51–60. IEEE, 2010.</p>
 </div>
-<div class="citation" id="id44" role="doc-biblioentry">
+<div class="citation" id="id43" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id12">10</a><span class="fn-bracket">]</span></span>
 <p>Cynthia Dwork, Aaron Roth, and others. The algorithmic foundations of differential privacy. <em>Foundations and Trends® in Theoretical Computer Science</em>, 9(3–4):211–407, 2014.</p>
 </div>
-<div class="citation" id="id47" role="doc-biblioentry">
+<div class="citation" id="id46" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id14">11</a><span class="fn-bracket">]</span></span>
 <p>Gilbert Wondracek, Thorsten Holz, Engin Kirda, and Christopher Kruegel. A practical attack to de-anonymize social network users. In <em>2010 ieee symposium on security and privacy</em>, 223–238. IEEE, 2010.</p>
 </div>
-<div class="citation" id="id48" role="doc-biblioentry">
+<div class="citation" id="id47" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id14">12</a><span class="fn-bracket">]</span></span>
 <p>Md Atiqur Rahman, Tanzila Rahman, Robert Laganière, Noman Mohammed, and Yang Wang. Membership inference attack against differentially private deep learning model. <em>Trans. Data Priv.</em>, 11(1):61–79, 2018.</p>
 </div>
-<div class="citation" id="id49" role="doc-biblioentry">
+<div class="citation" id="id48" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id14">13</a><span class="fn-bracket">]</span></span>
 <p>Reza Shokri, Marco Stronati, Congzheng Song, and Vitaly Shmatikov. Membership inference attacks against machine learning models. In <em>2017 IEEE symposium on security and privacy (SP)</em>, 3–18. IEEE, 2017.</p>
 </div>
-<div class="citation" id="id50" role="doc-biblioentry">
+<div class="citation" id="id49" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id14">14</a><span class="fn-bracket">]</span></span>
 <p>Jianwei Qian, Xiang-Yang Li, Chunhong Zhang, and Linlin Chen. De-anonymizing social networks and inferring private attributes using knowledge graphs. In <em>IEEE INFOCOM 2016-The 35th Annual IEEE International Conference on Computer Communications</em>, 1–9. IEEE, 2016.</p>
 </div>
-<div class="citation" id="id54" role="doc-biblioentry">
+<div class="citation" id="id53" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id17">15</a><span class="fn-bracket">]</span></span>
 <p>Masahiro Yagisawa. Fully homomorphic encryption without bootstrapping. <em>Cryptology ePrint Archive</em>, 2015.</p>
 </div>
-<div class="citation" id="id51" role="doc-biblioentry">
+<div class="citation" id="id50" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id18">16</a><span class="fn-bracket">]</span></span>
 <p>Jung Hee Cheon, Andrey Kim, Miran Kim, and Yongsoo Song. Homomorphic encryption for arithmetic of approximate numbers. In <em>Advances in Cryptology–ASIACRYPT 2017: 23rd International Conference on the Theory and Applications of Cryptology and Information Security, Hong Kong, China, December 3-7, 2017, Proceedings, Part I 23</em>, 409–437. Springer, 2017.</p>
 </div>
-<div class="citation" id="id52" role="doc-biblioentry">
+<div class="citation" id="id51" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id19">17</a><span class="fn-bracket">]</span></span>
 <p>Michel Abdalla, Florian Bourse, Angelo De Caro, and David Pointcheval. Simple functional encryption schemes for inner products. In <em>IACR International Workshop on Public Key Cryptography</em>, 733–751. Springer, 2015.</p>
 </div>
-<div class="citation" id="id53" role="doc-biblioentry">
+<div class="citation" id="id52" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id19">18</a><span class="fn-bracket">]</span></span>
 <p>Michel Abdalla, Dario Catalano, Dario Fiore, Romain Gay, and Bogdan Ursu. Multi-input functional encryption for inner products: function-hiding realizations and constructions without pairings. In <em>Advances in Cryptology–CRYPTO 2018: 38th Annual International Cryptology Conference, Santa Barbara, CA, USA, August 19–23, 2018, Proceedings, Part I 38</em>, 597–627. Springer, 2018.</p>
 </div>
-<div class="citation" id="id55" role="doc-biblioentry">
+<div class="citation" id="id54" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id23">19</a><span class="fn-bracket">]</span></span>
 <p>Martin Abadi, Andy Chu, Ian Goodfellow, H Brendan McMahan, Ilya Mironov, Kunal Talwar, and Li Zhang. Deep learning with differential privacy. In <em>Proceedings of the 2016 ACM SIGSAC conference on computer and communications security</em>, 308–318. 2016.</p>
 </div>
