@@ -342,9 +342,9 @@ Requirement already satisfied: tenseal in /home/hsiangjenli/miniconda3/lib/pytho
 <h2>HE consist of four primary algorithms:<a class="headerlink" href="#HE-consist-of-four-primary-algorithms:" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p><strong>Key Generation</strong> - Generates a public key ( <span class="math notranslate nohighlight">\(\textbf{pk}\)</span> ) and a secret key ( <span class="math notranslate nohighlight">\(\textbf{sk}\)</span> ).</p></li>
-<li><p><strong>Encryption</strong> - Encrypts a plaintext tensor ( <span class="math notranslate nohighlight">\(\text{num}\)</span> ) into a ciphertext tensor ( <span class="math notranslate nohighlight">\(\textbf{pk}(\text{num}) = C_{\text{num}}\)</span> ).</p></li>
-<li><p><strong>Evaluation</strong></p></li>
-<li><p><strong>Decryption</strong></p></li>
+<li><p><strong>Encryption</strong> - Encrypts a plaintext tensor ( <span class="math notranslate nohighlight">\(\text{num}\)</span> ) into a ciphertext tensor ( <span class="math notranslate nohighlight">\(\textbf{Enc}(\text{pk}, \text{num}) = C_{\text{num}}\)</span> ).</p></li>
+<li><p><strong>Evaluation</strong> - Performs operations on ciphertext tensors.</p></li>
+<li><p><strong>Decryption</strong> - Decrypts a ciphertext tensor ( <span class="math notranslate nohighlight">\(C_{\text{num}}\)</span> ) into a plaintext tensor ( <span class="math notranslate nohighlight">\(\textbf{Dec}(\text{sk}, C_{\text{num}}) = \text{num}\)</span> ).</p></li>
 </ol>
 </section>
 <section id="Import-Lib">
@@ -529,7 +529,7 @@ Object `Context` not found.
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">encrypted_vector</span> <span class="o">-</span> <span class="n">encrypted_vector</span><span class="p">)</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">sk</span><span class="p">)</span> <span class="c1"># zero</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">encrypted_vector</span> <span class="o">-</span> <span class="n">encrypted_vector</span><span class="p">)</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">sk</span><span class="p">)</span> <span class="c1"># Error</span>
 </pre></div>
 </div>
 </div>
@@ -541,7 +541,7 @@ Object `Context` not found.
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">RuntimeError</span>                              Traceback (most recent call last)
 Cell <span class="ansi-green-fg">In[11], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> (<span class="ansi-yellow-bg">encrypted_vector</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">-</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">encrypted_vector</span>)<span style="color: rgb(98,98,98)">.</span>decrypt(sk) <span style="color: rgb(95,135,135)"># zero</span>
+<span class="ansi-green-fg">----&gt; 1</span> (<span class="ansi-yellow-bg">encrypted_vector</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">-</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg">encrypted_vector</span>)<span style="color: rgb(98,98,98)">.</span>decrypt(sk) <span style="color: rgb(95,135,135)"># Error</span>
 
 <span class="ansi-red-fg">RuntimeError</span>: result ciphertext is transparent
 </pre></div></div>
@@ -567,10 +567,10 @@ Cell <span class="ansi-green-fg">In[11], line 1</span>
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">encrypted_vector</span> <span class="o">*</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">sk</span><span class="p">)</span> <span class="c1"># zero</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">encrypted_vector</span> <span class="o">*</span> <span class="mi">0</span><span class="p">)</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">sk</span><span class="p">)</span> <span class="c1"># Error</span>
 </pre></div>
 </div>
 </div>
@@ -582,7 +582,7 @@ Cell <span class="ansi-green-fg">In[11], line 1</span>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">RuntimeError</span>                              Traceback (most recent call last)
 Cell <span class="ansi-green-fg">In[13], line 1</span>
-<span class="ansi-green-fg">----&gt; 1</span> (<span class="ansi-yellow-bg">encrypted_vector</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">*</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">0</span>)<span style="color: rgb(98,98,98)">.</span>decrypt(sk)
+<span class="ansi-green-fg">----&gt; 1</span> (<span class="ansi-yellow-bg">encrypted_vector</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">*</span><span class="ansi-yellow-bg"> </span><span class="ansi-yellow-bg" style="color: rgb(98,98,98)">0</span>)<span style="color: rgb(98,98,98)">.</span>decrypt(sk) <span style="color: rgb(95,135,135)"># Error</span>
 
 <span class="ansi-red-fg">RuntimeError</span>: result ciphertext is transparent
 </pre></div></div>
