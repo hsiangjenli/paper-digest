@@ -1,0 +1,27 @@
+Open Source Repositories for PPML
+==================================
+
+
+Code Snippets
+-------------
+.. toctree:: 
+   :glob:
+   :maxdepth: 1
+
+   notebook/nb_tenseal
+
+Homomorphic Encryption
+----------------------
+* https://github.com/jonaschn/awesome-he
+* https://github.com/serengil/LightPHE
+* https://github.com/OpenMined/TenSEAL :cite:`tenseal2021`
+
+Privacy Preserving Machine Learning framework
+---------------------------------------------
+* https://github.com/facebookresearch/CrypTen
+
+
+References
+----------
+.. bibliography::
+    :filter: docname in docnames
