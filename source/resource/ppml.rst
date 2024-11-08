@@ -9,6 +9,7 @@ Code Snippets
    :maxdepth: 1
 
    notebook/nb_tenseal
+   notebook/nb_tenseal-save-bfv
 
 Homomorphic Encryption
 ----------------------
