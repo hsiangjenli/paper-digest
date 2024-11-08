@@ -32,10 +32,17 @@ class TitleRefRole(SphinxRole):
         node = nodes.raw(text=bibfiles[bib_id].fields['title'], format='html')
         return [node], []
 
-extensions = ['sphinxcontrib.bibtex', 'sphinx_add_text', 'nbsphinx']
+extensions = ['sphinxcontrib.bibtex', 'sphinx_add_text', 'myst_parser', 'nbsphinx']
 
 bibtex_bibfiles = ['paper.bib']
 bibtex_default_style = 'unsrt'
+
+source_suffix = ['.rst', '.md']
+myst_enable_extensions = [
+    "dollarmath",        # 支援 $...$ 內的數學表達式
+    "amsmath",           # 支援數學符號
+    "colon_fence",       # 支援 `:::` 區塊
+]
 
 nbsphinx_execute = 'never'
 highlight_language = 'python3'
