@@ -52,6 +52,7 @@
     <link rel="icon" href="https://hsiangjenli.github.io/static/image/ico.svg"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="OpenMined/TenSEAL (Save/Load Key &amp; Encrypted Data @ BFV)" href="nb_tenseal-save-bfv.html" />
     <link rel="prev" title="Open Source Repositories for PPML" href="../ppml.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -153,6 +154,7 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../ppml.html">Open Source Repositories for PPML</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">OpenMined/TenSEAL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nb_tenseal-save-bfv.html">OpenMined/TenSEAL (Save/Load Key &amp; Encrypted Data @ BFV)</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../paper/xu2021privacy.html">Privacy-preserving machine learning: Methods, challenges and directions</a></li>
@@ -296,7 +298,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#HE-consist-of-four-primary-algorithms:">HE consist of four primary algorithms:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#HE-consist-of-four-primary-algorithms-:cite:xu2021privacy">HE consist of four primary algorithms :cite:<code class="docutils literal notranslate"><span class="pre">xu2021privacy</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Import-Lib">Import Lib</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Key-Generation">Key Generation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Encryption-&amp;-Decryption">Encryption &amp; Decryption</a></li>
@@ -321,7 +323,7 @@
                   
   <section id="OpenMined/TenSEAL">
 <h1>OpenMined/TenSEAL<a class="headerlink" href="#OpenMined/TenSEAL" title="Link to this heading">#</a></h1>
-<p><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></p>
+<p><a class="reference external" href="https://colab.research.google.com/github/hsiangjenli/paper-digest/blob/main/source/resource/notebook/nb_tenseal.ipynb"><img alt="image1" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
@@ -338,8 +340,8 @@
 Requirement already satisfied: tenseal in /home/hsiangjenli/miniconda3/lib/python3.12/site-packages (0.3.15)
 </pre></div></div>
 </div>
-<section id="HE-consist-of-four-primary-algorithms:">
-<h2>HE consist of four primary algorithms:<a class="headerlink" href="#HE-consist-of-four-primary-algorithms:" title="Link to this heading">#</a></h2>
+<section id="HE-consist-of-four-primary-algorithms-:cite:xu2021privacy">
+<h2>HE consist of four primary algorithms :cite:<code class="docutils literal notranslate"><span class="pre">xu2021privacy</span></code><a class="headerlink" href="#HE-consist-of-four-primary-algorithms-:cite:xu2021privacy" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
 <li><p><strong>Key Generation</strong> - Generates a public key ( <span class="math notranslate nohighlight">\(\textbf{pk}\)</span> ) and a secret key ( <span class="math notranslate nohighlight">\(\textbf{sk}\)</span> ).</p></li>
 <li><p><strong>Encryption</strong> - Encrypts a plaintext tensor ( <span class="math notranslate nohighlight">\(\text{num}\)</span> ) into a ciphertext tensor ( <span class="math notranslate nohighlight">\(\textbf{Enc}(\text{pk}, \text{num}) = C_{\text{num}}\)</span> ).</p></li>
@@ -629,6 +631,15 @@ Cell <span class="ansi-green-fg">In[13], line 1</span>
         <p class="prev-next-title">Open Source Repositories for PPML</p>
       </div>
     </a>
+    <a class="right-next"
+       href="nb_tenseal-save-bfv.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">OpenMined/TenSEAL (Save/Load Key &amp; Encrypted Data &#64; BFV)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -646,7 +657,7 @@ Cell <span class="ansi-green-fg">In[13], line 1</span>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#HE-consist-of-four-primary-algorithms:">HE consist of four primary algorithms:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#HE-consist-of-four-primary-algorithms-:cite:xu2021privacy">HE consist of four primary algorithms :cite:<code class="docutils literal notranslate"><span class="pre">xu2021privacy</span></code></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Import-Lib">Import Lib</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Key-Generation">Key Generation</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#Encryption-&amp;-Decryption">Encryption &amp; Decryption</a></li>
