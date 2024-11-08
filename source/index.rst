@@ -20,4 +20,5 @@ Paper Digest
    :maxdepth: 1
 
    resource/ppml
+   paper/xu2021privacy-outline
    paper/xu2021privacy

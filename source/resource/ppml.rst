@@ -15,6 +15,8 @@ Homomorphic Encryption
 ----------------------
 * https://github.com/jonaschn/awesome-he
 * https://github.com/serengil/LightPHE
+* https://github.com/ibarrond/Pyfhel
+* https://github.com/openfheorg/openfhe-python
 * https://github.com/OpenMined/TenSEAL :cite:`tenseal2021`
 
 Privacy Preserving Machine Learning framework
