@@ -4,3 +4,5 @@ nbsphinx
 pygments 
 ipython
 myst-parser
+pandas
+Jinja2

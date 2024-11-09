@@ -28,4 +28,4 @@ c:
 	make run
 
 run:
-	docker run -it --rm -v "$(PWD):/docs" hsiangjenli/sphinx-doc:paper-digest make html
+	docker run -it --rm -v "$(PWD):/docs" hsiangjenli/sphinx-doc:paper-digest python source/resource/keyterm/gen.py && make html

@@ -22,7 +22,7 @@ jobs:
         with:
             image: hsiangjenli/sphinx-doc:paper-digest
             options: --platform linux/amd64 -v ${{ github.workspace }}:/docs --user root
-            run: make html
+            run: python source/resource/keyterm/gen.py && make html
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
