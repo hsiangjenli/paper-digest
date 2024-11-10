@@ -7,9 +7,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta content="2024-09-01" name="date" />
 
-    <title>A survey of privacy attacks in machine learning &#8212; Paper Digest</title>
+    <title>AI for next generation computing: Emerging trends and future directions &#8212; Paper Digest</title>
   
   
   
@@ -46,12 +45,12 @@
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'paper/rigaki2023survey';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'paper/gill2022ai';</script>
     <link rel="icon" href="https://hsiangjenli.github.io/static/image/ico.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Survey on federated learning threats: Concepts, taxonomy on attacks and defences, experimental study and challenges" href="rodriguez2023survey.html" />
-    <link rel="prev" title="When machine learning meets privacy: A survey and outlook" href="liu2021machine.html" />
+    <link rel="next" title="When machine learning meets privacy: A survey and outlook" href="liu2021machine.html" />
+    <link rel="prev" title="Paper Digest" href="../index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -143,9 +142,9 @@
     <div class="bd-toc-item navbar-nav active">
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of Contents:</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="gill2022ai.html">AI for next generation computing: Emerging trends and future directions</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">AI for next generation computing: Emerging trends and future directions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="liu2021machine.html">When machine learning meets privacy: A survey and outlook</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">A survey of privacy attacks in machine learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rigaki2023survey.html">A survey of privacy attacks in machine learning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rodriguez2023survey.html">Survey on federated learning threats: Concepts, taxonomy on attacks and defences, experimental study and challenges</a></li>
 <li class="toctree-l1"><a class="reference internal" href="xu2021privacy.html">WIP - Privacy-preserving machine learning: Methods, challenges and directions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="xu2021privacy-outline.html">WIP - Outline of Privacy-preserving machine learning: Methods, challenges and directions</a></li>
@@ -218,7 +217,7 @@
       
       
       
-      <li><a href="../_sources/paper/rigaki2023survey.rst" target="_blank"
+      <li><a href="../_sources/paper/gill2022ai.rst" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -294,7 +293,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>A survey of privacy attacks in machine learning</h1>
+    <h1>AI for next generation computing: Emerging trends and future directions</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -304,8 +303,14 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#research-contributions">Research Contributions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-concepts-and-terminologies">Key Concepts and Terminologies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proposed-methodologies">Proposed Methodologies</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cloud-computing">Cloud Computing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fog-computing">Fog Computing</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusions">Conclusions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
             </nav>
@@ -318,69 +323,108 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="a-survey-of-privacy-attacks-in-machine-learning">
-<h1>A survey of privacy attacks in machine learning<a class="headerlink" href="#a-survey-of-privacy-attacks-in-machine-learning" title="Link to this heading">#</a></h1>
+  <section id="ai-for-next-generation-computing-emerging-trends-and-future-directions">
+<h1>AI for next generation computing: Emerging trends and future directions<a class="headerlink" href="#ai-for-next-generation-computing-emerging-trends-and-future-directions" title="Link to this heading">#</a></h1>
 <div class="admonition note">
     <p class="admonition-title">Note</p>
     <p>Hey guys, this is my personal reading note. I am not sure there might be some mistakes in my understanding. Please feel free to correct me (<a class="reference external" href="mailto:hsiangjenli&#37;&#52;&#48;gmail&#46;com">hsiangjenli<span>&#64;</span>gmail<span>&#46;</span>com</a>) if you find any. Thanks!</p>
 </div><ul class="simple">
-<li><p>Publish Year : <span id="id1"><a class="reference internal" href="#id35" title="Maria Rigaki and Sebastian Garcia. A survey of privacy attacks in machine learning. ACM Computing Surveys, 56(4):1–34, 2023.">2023</a></span></p></li>
-<li><p>Authors : <span id="id2"><a class="reference internal" href="#id35" title="Maria Rigaki and Sebastian Garcia. A survey of privacy attacks in machine learning. ACM Computing Surveys, 56(4):1–34, 2023.">Rigaki and Garcia</a></span></p></li>
+<li><p>Publish Year : <span id="id1"><a class="reference internal" href="#id40" title="Sukhpal Singh Gill, Minxian Xu, Carlo Ottaviani, Panos Patros, Rami Bahsoon, Arash Shaghaghi, Muhammed Golec, Vlado Stankovski, Huaming Wu, Ajith Abraham, and others. Ai for next generation computing: emerging trends and future directions. Internet of Things, 19:100514, 2022.">2022</a></span></p></li>
+<li><p>Authors : <span id="id2"><a class="reference internal" href="#id40" title="Sukhpal Singh Gill, Minxian Xu, Carlo Ottaviani, Panos Patros, Rami Bahsoon, Arash Shaghaghi, Muhammed Golec, Vlado Stankovski, Huaming Wu, Ajith Abraham, and others. Ai for next generation computing: emerging trends and future directions. Internet of Things, 19:100514, 2022.">Gill, Xu, Ottaviani, Patros, Bahsoon, Shaghaghi, Golec, Stankovski, Wu, Abraham, and others</a></span></p></li>
 </ul>
-<section id="abstract">
-<h2>Abstract<a class="headerlink" href="#abstract" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Analysis of more than 45 papers related to privacy attacks against machine learning</p></li>
-<li><p>Attack taxonomy (focus on privacy and confidentiality attacks)</p></li>
-<li><p>Exploration of the causes of privacy leaks</p></li>
-<li><p>The most common defenses methods, open problems and future directions</p></li>
-<li><p>Implementation of the attacks</p></li>
-</ul>
+<section id="research-contributions">
+<h2>Research Contributions<a class="headerlink" href="#research-contributions" title="Link to this heading">#</a></h2>
+<p>By combining AI/ML with cloud, fog, edge, serverless, and quantum computing, we have created the first review of its kind.
+Adding to the previous surveys, this new research gives a new imaginative approach to assessing and identifying the most current
+research challenges</p>
 </section>
-<section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Link to this heading">#</a></h2>
-<p>How models leaks information</p>
-<ol class="arabic simple">
-<li><p>The way of constructing models</p>
+<section id="key-concepts-and-terminologies">
+<h2>Key Concepts and Terminologies<a class="headerlink" href="#key-concepts-and-terminologies" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>For example, adversarial robustness (make the model can defenses against adversarial examples) can leak information about the training data</p></li>
-<li><p>Because the modelmay overfitting to the training data, which means the model already memorized the training data</p></li>
-</ul>
-</li>
-<li><p>Poor generalization and memorization of sensitive data samples</p></li>
-</ol>
-<p>three types of attacks on machine learning systems:</p>
-<ol class="arabic simple">
-<li><p>attacks against integrity - 完整性攻擊
-- 攻擊 input data，讓模型做出錯誤決策</p></li>
-<li><p>attacks against a system’s availability
-- Maximize the misclassification error</p></li>
-<li><p>attacks against privacy and confidentiality !!!
-- try to infer information about user data and models
-- 試圖推理出 data 的資訊或是模型的敏感訊息</p></li>
-</ol>
-<p>Type of Machine learning architecture</p>
-<ul class="simple">
-<li><p>Centralized Learning</p></li>
 <li><dl class="simple">
-<dt>Distributed Learning</dt><dd><ol class="arabic simple">
-<li><p>collaborative or federated learning (FL)</p></li>
-<li><p>fully decentralized or peer-to-peer (P2P) learning</p></li>
-<li><p>split learning</p></li>
-</ol>
+<dt>Autonomic Computing Initiative (ACI)</dt><dd><ul>
+<li><p>The target of the ACI is to develop self-managing systems that can automatically adapt to changes in the environment and requirements of the system without human intervention.</p></li>
+<li><p>Inspired by human nervous system and human cognition</p></li>
+<li><p>self-adaptive systems</p></li>
+<li><p>self-configuration, self-optimisation, self-protection and self-healing <span id="id3">[<a class="reference internal" href="#id41" title="Erik Elmroth, Johan Tordsson, Francisco Hernández, Ahmed Ali-Eldin, Petter Svärd, Mina Sedaghat, and Wubin Li. Self-management challenges for multi-cloud architectures. In Towards a Service-Based Internet: 4th European Conference, ServiceWave 2011, Poznan, Poland, October 26-28, 2011. Proceedings 4, 38–49. Springer, 2011.">2</a>]</span></p></li>
+<li><p>automatically upgrades missing or obsolete components depending on error messages/alerts generated by a monitoring system</p></li>
+<li><p>educing resource overload and under-utilisation</p></li>
+<li><p>self-protection is an autonomic system’s capacity to defend itself against potential cyber-attacks and intrusions</p></li>
+<li><p>ability to discover, evaluate and recover from errors on its own, without the need for human intervention</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>cloud, fog, edge, serverless and quantum computing</dt><dd><ul>
+<li><p>cloud computing : TODO</p></li>
+<li><p>fog computing : TODO</p></li>
+<li><p>edge computing : TODO</p></li>
+<li><p>serverless computing : TODO</p></li>
+</ul>
 </dd>
 </dl>
 </li>
 </ul>
 </section>
+<section id="proposed-methodologies">
+<h2>Proposed Methodologies<a class="headerlink" href="#proposed-methodologies" title="Link to this heading">#</a></h2>
+<figure class="align-default" id="id42">
+<img alt="../_images/image-1.png" src="../_images/image-1.png" />
+<figcaption>
+<p><span class="caption-text">This figure is taken from the paper <span id="id4">[<a class="reference internal" href="#id40" title="Sukhpal Singh Gill, Minxian Xu, Carlo Ottaviani, Panos Patros, Rami Bahsoon, Arash Shaghaghi, Muhammed Golec, Vlado Stankovski, Huaming Wu, Ajith Abraham, and others. Ai for next generation computing: emerging trends and future directions. Internet of Things, 19:100514, 2022.">1</a>]</span></span><a class="headerlink" href="#id42" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><strong>Self-healing</strong> : The key concept of self-healing is to develop predictive models that can predict the future state of the system and take corrective actions to prevent system failures, rather than simply reacting to them. This approach is also known as fault detection and predictive maintenance.</p></li>
+<li><p><strong>Self-protection</strong> : Continuously monitor suspicious activities to ensure the system runs smoothly.</p></li>
+<li><p><strong>Self-configuration</strong> : Reinstalling missing or obsolete components without human intervention.</p></li>
+<li><p><strong>Self-optimisation</strong> : The system is particularly suitable for data-intensive applications, as it can automatically adjust its resources based on environmental changes.</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>Monitor</p></li>
+<li><p>Analyse</p></li>
+<li><p>Plan</p></li>
+<li><p>Execute</p></li>
+</ol>
+<section id="cloud-computing">
+<h3>Cloud Computing<a class="headerlink" href="#cloud-computing" title="Link to this heading">#</a></h3>
+<p>Open Challenge</p>
+<ol class="arabic simple">
+<li><p>Integration : Companies need to move their applications to the cloud</p></li>
+<li><p>Inadequate Data : Data is accessible and clean for AI/ML</p></li>
+<li><p>Security and Privacy : Prevent data breaches and protect sensitive information from adversaries</p></li>
+</ol>
+</section>
+<section id="fog-computing">
+<h3>Fog Computing<a class="headerlink" href="#fog-computing" title="Link to this heading">#</a></h3>
+<p>Supplement of Cloud Computing
+IoT need mininal reaction time</p>
+<p>Open Challenge</p>
+<ol class="arabic simple">
+<li><p>Execution time : Speed up reaction time</p></li>
+<li><p>Mobility Awareness : Fog computing struggles with mobility (e.g., devices moving from one location to another) because it’s primarily designed for fixed devices.</p></li>
+<li><p>Resource Schedule : Fog computing is less flexible than cloud computing due to limited resources, making efficient resource scheduling challenging.</p></li>
+<li><p>Energy Efficiency :</p></li>
+<li><p>Security and Privacy :</p></li>
+</ol>
+</section>
+</section>
+<section id="conclusions">
+<h2>Conclusions<a class="headerlink" href="#conclusions" title="Link to this heading">#</a></h2>
+</section>
 <section id="references">
 <h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
-<div class="docutils container" id="id3">
+<div class="docutils container" id="id5">
 <div role="list" class="citation-list">
-<div class="citation" id="id35" role="doc-biblioentry">
+<div class="citation" id="id40" role="doc-biblioentry">
 <span class="label"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></span>
-<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>)</span>
-<p>Maria Rigaki and Sebastian Garcia. A survey of privacy attacks in machine learning. <em>ACM Computing Surveys</em>, 56(4):1–34, 2023.</p>
+<span class="backrefs">(<a role="doc-backlink" href="#id1">1</a>,<a role="doc-backlink" href="#id2">2</a>,<a role="doc-backlink" href="#id4">3</a>)</span>
+<p>Sukhpal Singh Gill, Minxian Xu, Carlo Ottaviani, Panos Patros, Rami Bahsoon, Arash Shaghaghi, Muhammed Golec, Vlado Stankovski, Huaming Wu, Ajith Abraham, and others. Ai for next generation computing: emerging trends and future directions. <em>Internet of Things</em>, 19:100514, 2022.</p>
+</div>
+<div class="citation" id="id41" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">2</a><span class="fn-bracket">]</span></span>
+<p>Erik Elmroth, Johan Tordsson, Francisco Hernández, Ahmed Ali-Eldin, Petter Svärd, Mina Sedaghat, and Wubin Li. Self-management challenges for multi-cloud architectures. In <em>Towards a Service-Based Internet: 4th European Conference, ServiceWave 2011, Poznan, Poland, October 26-28, 2011. Proceedings 4</em>, 38–49. Springer, 2011.</p>
 </div>
 </div>
 </div>
@@ -399,20 +443,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="liu2021machine.html"
+       href="../index.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">When machine learning meets privacy: A survey and outlook</p>
+        <p class="prev-next-title">Paper Digest</p>
       </div>
     </a>
     <a class="right-next"
-       href="rodriguez2023survey.html"
+       href="liu2021machine.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Survey on federated learning threats: Concepts, taxonomy on attacks and defences, experimental study and challenges</p>
+        <p class="prev-next-title">When machine learning meets privacy: A survey and outlook</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -433,8 +477,14 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#research-contributions">Research Contributions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-concepts-and-terminologies">Key Concepts and Terminologies</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#proposed-methodologies">Proposed Methodologies</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cloud-computing">Cloud Computing</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fog-computing">Fog Computing</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusions">Conclusions</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references">References</a></li>
 </ul>
   </nav></div>
