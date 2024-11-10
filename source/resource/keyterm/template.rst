@@ -1,7 +1,7 @@
 KeyTerms
 ========
 
-.. list-table:: Title
+.. list-table:: 
    :widths: 10 30 60
    :header-rows: 1
 
