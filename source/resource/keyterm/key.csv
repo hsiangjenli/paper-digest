@@ -1,2 +1,17 @@
 Abbreviation,Term,Definition
+ACI,Autonomic Computing Initiative,Todo.
+AEs,Autonomic Elements,Todo.
+AM,Autonomic Manager,Todo.
 FHE,Fully Homomorphic Encryption,An encryption scheme that allows computation on encrypted data.
+FaaS,Function As A Service,Provide a virtual environment for computer systems that can be dynamically scaled up and down.
+IaaS,Infrastructure As A Service,Todo.
+IoE,Internet Of Everything,Todo.
+MAPE,Monitor Analyse Plan Execute,Todo.
+PaaS,Platform As A Service,Todo.
+QoE,Quality Of Experience,Todo.
+QoS,Quality Of Service,Todo.
+SARSA,State Action Reward State Action,Todo.
+SLOs,Service Level Objectives,Todo.
+SaaS,Software As A Service,Todo.
+V2X,Vehicle To Everything,Todo.
+X,Autonomous Computing,Todo.
