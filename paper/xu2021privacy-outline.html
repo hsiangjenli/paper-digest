@@ -45,6 +45,8 @@
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'paper/xu2021privacy-outline';</script>
     <link rel="icon" href="https://hsiangjenli.github.io/static/image/ico.svg"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -323,6 +325,7 @@
 </ul>
 </li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#model-serving-phase">Model Serving Phase</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#typical-types-of-privacy-leakage">Typical types of privacy leakage</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#global-model-privacy-guarantee">Global Model Privacy Guarantee</a></li>
 </ul>
 </li>
@@ -332,13 +335,42 @@
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technical-u-tility-in-ppml">Technical {U}tility in PPML</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-publish-approach">Data Publish Approach</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-processing-approach">Data Processing Approach</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#architectureal-appraoch">Architectureal Appraoch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-publish-approach">Data Publish Approach</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elimitation-based-approach">Elimitation-based Approach</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#perturbation-based-approach">Perturbation-based Approach</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#confusion-based-approach-cryptography">Confusion-based Approach (Cryptography)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-processing-approach">Data Processing Approach</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ordinary-computation">Ordinary Computation</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#elimination-based-approach">Elimination-based Approach</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Perturbation-based Approach</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#secure-computation">Secure Computation</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#additive-mask-based-approach">Additive Mask based Approach</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#garbled-circuit-based-approach">Garbled Circuit based Approach</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-cryptography-based-approach">Advanced Cryptography based Approach</a><ul class="nav section-nav flex-column">
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#homomorphic-encryption">Homomorphic Encryption</a></li>
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#functional-encryption">Functional Encryption</a></li>
+</ul>
+</li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#mixed-protocol-approach">Mixed Protocol Approach</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#trusted-execution-environment-approach">Trusted Execution Environment Approach</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#architectureal-appraoch">Architectureal Appraoch</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#delegation-based-ml-architecture">Delegation-based ML Architecture</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#distributed-selective-sgd-architecture">Distributed Selective SGD Architecture</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#federated-learning-architecture">Federated Learning Architecture</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#knowledge-transfer-architecture">Knowledge Transfer Architecture</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hybrid-approach">Hybrid Approach</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge-and-potential-directions">Challenge and Potential Directions</a></li>
 </ul>
             </nav>
         </div>
@@ -461,6 +493,13 @@ e.g. Revealing the column used in training data, which may let attackers link th
 </section>
 <section id="model-serving-phase">
 <h4>Model Serving Phase<a class="headerlink" href="#model-serving-phase" title="Link to this heading">#</a></h4>
+<section id="typical-types-of-privacy-leakage">
+<h5>Typical types of privacy leakage<a class="headerlink" href="#typical-types-of-privacy-leakage" title="Link to this heading">#</a></h5>
+<ol class="arabic simple">
+<li><p>Disclosure of Membership</p></li>
+<li><p>Class Representative</p></li>
+<li><p>Property</p></li>
+</ol>
 <blockquote>
 <div><p>Guarantee on model serving phase, there are four roles:</p>
 <ol class="arabic simple">
@@ -470,8 +509,16 @@ e.g. Revealing the column used in training data, which may let attackers link th
 <li><p>Model Consumer</p></li>
 </ol>
 </div></blockquote>
+</section>
 <section id="global-model-privacy-guarantee">
 <h5>Global Model Privacy Guarantee<a class="headerlink" href="#global-model-privacy-guarantee" title="Link to this heading">#</a></h5>
+<blockquote>
+<div><ul class="simple">
+<li><p>🟩 Local CF</p></li>
+<li><p>🟩 Third-Party CF</p></li>
+<li><p>🔴 Model Consumer</p></li>
+</ul>
+</div></blockquote>
 </section>
 </section>
 <section id="full-privacy-guarantee">
@@ -482,27 +529,180 @@ e.g. Revealing the column used in training data, which may let attackers link th
 <hr class="docutils" />
 <section id="technical-u-tility-in-ppml">
 <h2>Technical {U}tility in PPML<a class="headerlink" href="#technical-u-tility-in-ppml" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>How to release/publish data without revealing sensitive information</p></li>
+<li><p>How the data used in the model training</p></li>
+<li><p>The architecture of ML system prevents the disclosure of sensitive information</p></li>
+</ol>
+</div></blockquote>
+<blockquote>
+<div><p>The impact of using PPML can be classified into n categories:</p>
+<ol class="arabic simple">
+<li><p>Model Utility</p></li>
+<li><p>Computation Utility</p></li>
+<li><p>Communication Utility</p></li>
+<li><p>Scalability Utility</p></li>
+<li><p>Scenario Utility</p></li>
+<li><p>Privacy Utility</p></li>
+</ol>
+</div></blockquote>
+<!-- > 1. Computation Utility
+> 1. Communication Utility
+> 1. Model Utility
+> 1. Scalability Utility -->
 <section id="data-publish-approach">
 <h3>Data Publish Approach<a class="headerlink" href="#data-publish-approach" title="Link to this heading">#</a></h3>
+<section id="elimitation-based-approach">
+<h4>Elimitation-based Approach<a class="headerlink" href="#elimitation-based-approach" title="Link to this heading">#</a></h4>
+<blockquote>
+<div><ul class="simple">
+<li><p>Totally eliminate the identifier from the data</p></li>
+<li><p>Partially conceal quasi-identifiers</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(k\)</span>-anonymity</p></li>
+<li><p><span class="math notranslate nohighlight">\(l\)</span>-diversity</p></li>
+<li><p><span class="math notranslate nohighlight">\(t\)</span>-closeness</p></li>
+</ol>
+</section>
+<section id="perturbation-based-approach">
+<h4>Perturbation-based Approach<a class="headerlink" href="#perturbation-based-approach" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Differential Privacy</p></li>
+<li><p>Sketching</p></li>
+</ol>
+</section>
+<section id="confusion-based-approach-cryptography">
+<h4>Confusion-based Approach (Cryptography)<a class="headerlink" href="#confusion-based-approach-cryptography" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Symmetric encryption (e.g. AES) + Garbled circuits / Oblivious transfer</p></li>
+<li><p>Homomorphic encryption</p></li>
+<li><p>Functional encryption</p></li>
+</ol>
+</section>
 </section>
 <section id="data-processing-approach">
 <h3>Data Processing Approach<a class="headerlink" href="#data-processing-approach" title="Link to this heading">#</a></h3>
+<section id="ordinary-computation">
+<h4>Ordinary Computation<a class="headerlink" href="#ordinary-computation" title="Link to this heading">#</a></h4>
+<blockquote>
+<div><p>If using traditional anonymization techniques or perturbation-based techniques, the identifiers are removed from the data, then can use ordinary computation</p>
+</div></blockquote>
+<section id="elimination-based-approach">
+<h5>Elimination-based Approach<a class="headerlink" href="#elimination-based-approach" title="Link to this heading">#</a></h5>
+</section>
+<section id="id3">
+<h5>Perturbation-based Approach<a class="headerlink" href="#id3" title="Link to this heading">#</a></h5>
+</section>
+</section>
+<section id="secure-computation">
+<h4>Secure Computation<a class="headerlink" href="#secure-computation" title="Link to this heading">#</a></h4>
+<blockquote>
+<div><p>Adversary setting is semi-honest or malicious</p>
+</div></blockquote>
+<section id="additive-mask-based-approach">
+<h5>Additive Mask based Approach<a class="headerlink" href="#additive-mask-based-approach" title="Link to this heading">#</a></h5>
+<blockquote>
+<div><ul class="simple">
+<li><p>Private data are masked with randomize values</p></li>
+<li><p>A light-weight approach of secure computation</p></li>
+</ul>
+</div></blockquote>
+<ol class="arabic simple">
+<li><p>Pairwise Additive Masking Based Secure Computation Approach</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(t\)</span>-of-<span class="math notranslate nohighlight">\(n\)</span> secret sharing</p></li>
+<li><p>Multi-Secret Sharing</p></li>
+</ul>
+</li>
+<li><p>Double Masking Pairwise Based Protocol</p>
+<ul class="simple">
+<li><p>Prevents the failure happened in Pairwise Additive Masking</p></li>
+</ul>
+</li>
+<li><p>Anonymous Communication</p>
+<ul class="simple">
+<li><p>DC-nets (Dining Cryptographers Networks)</p></li>
+<li><p>mix-nets</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="garbled-circuit-based-approach">
+<h5>Garbled Circuit based Approach<a class="headerlink" href="#garbled-circuit-based-approach" title="Link to this heading">#</a></h5>
+</section>
+<section id="advanced-cryptography-based-approach">
+<h5>Advanced Cryptography based Approach<a class="headerlink" href="#advanced-cryptography-based-approach" title="Link to this heading">#</a></h5>
+<section id="homomorphic-encryption">
+<h6>Homomorphic Encryption<a class="headerlink" href="#homomorphic-encryption" title="Link to this heading">#</a></h6>
+</section>
+<section id="functional-encryption">
+<h6>Functional Encryption<a class="headerlink" href="#functional-encryption" title="Link to this heading">#</a></h6>
+</section>
+</section>
+<section id="mixed-protocol-approach">
+<h5>Mixed Protocol Approach<a class="headerlink" href="#mixed-protocol-approach" title="Link to this heading">#</a></h5>
+<blockquote>
+<div><p>Combine the above approaches</p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><p>TASTY</p></li>
+<li><p>ABY</p></li>
+<li><p>ABY<span class="math notranslate nohighlight">\(^3\)</span></p></li>
+<li><p>CrypTen</p></li>
+<li><p>Falcon</p></li>
+</ol>
+</section>
+<section id="trusted-execution-environment-approach">
+<h5>Trusted Execution Environment Approach<a class="headerlink" href="#trusted-execution-environment-approach" title="Link to this heading">#</a></h5>
+<ol class="arabic simple">
+<li><p>Code Authentication</p></li>
+<li><p>Runtime State Integrity</p></li>
+<li><p>Confidentiality</p></li>
+</ol>
+</section>
+</section>
 </section>
 <section id="architectureal-appraoch">
 <h3>Architectureal Appraoch<a class="headerlink" href="#architectureal-appraoch" title="Link to this heading">#</a></h3>
+<section id="delegation-based-ml-architecture">
+<h4>Delegation-based ML Architecture<a class="headerlink" href="#delegation-based-ml-architecture" title="Link to this heading">#</a></h4>
+<blockquote>
+<div><p>Provide computation-limited parties the capability to create and use ML models</p>
+</div></blockquote>
+<ol class="arabic simple">
+<li><p>CryptoML</p></li>
+<li><p>SecureML</p></li>
+</ol>
+</section>
+<section id="distributed-selective-sgd-architecture">
+<h4>Distributed Selective SGD Architecture<a class="headerlink" href="#distributed-selective-sgd-architecture" title="Link to this heading">#</a></h4>
+</section>
+<section id="federated-learning-architecture">
+<h4>Federated Learning Architecture<a class="headerlink" href="#federated-learning-architecture" title="Link to this heading">#</a></h4>
+</section>
+<section id="knowledge-transfer-architecture">
+<h4>Knowledge Transfer Architecture<a class="headerlink" href="#knowledge-transfer-architecture" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Knowledge Distillation</p></li>
+<li><p>Model Compression</p></li>
+<li><p>Transfer Learning</p></li>
+</ol>
+</section>
 </section>
 <section id="hybrid-approach">
 <h3>Hybrid Approach<a class="headerlink" href="#hybrid-approach" title="Link to this heading">#</a></h3>
-</section>
-</section>
-<hr class="docutils" />
-<section id="challenge-and-potential-directions">
-<h2>Challenge and Potential Directions<a class="headerlink" href="#challenge-and-potential-directions" title="Link to this heading">#</a></h2>
+<!-- ---
+
+## Challenge and Potential Directions -->
 <!-- References
 
 ```{bibliography}
 :filter: docname in docnames
 ``` -->
+</section>
 </section>
 </section>
 
@@ -572,6 +772,7 @@ e.g. Revealing the column used in training data, which may let attackers link th
 </ul>
 </li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#model-serving-phase">Model Serving Phase</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#typical-types-of-privacy-leakage">Typical types of privacy leakage</a></li>
 <li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#global-model-privacy-guarantee">Global Model Privacy Guarantee</a></li>
 </ul>
 </li>
@@ -581,13 +782,42 @@ e.g. Revealing the column used in training data, which may let attackers link th
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technical-u-tility-in-ppml">Technical {U}tility in PPML</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-publish-approach">Data Publish Approach</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-processing-approach">Data Processing Approach</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#architectureal-appraoch">Architectureal Appraoch</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-publish-approach">Data Publish Approach</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#elimitation-based-approach">Elimitation-based Approach</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#perturbation-based-approach">Perturbation-based Approach</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#confusion-based-approach-cryptography">Confusion-based Approach (Cryptography)</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-processing-approach">Data Processing Approach</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ordinary-computation">Ordinary Computation</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#elimination-based-approach">Elimination-based Approach</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Perturbation-based Approach</a></li>
+</ul>
+</li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#secure-computation">Secure Computation</a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#additive-mask-based-approach">Additive Mask based Approach</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#garbled-circuit-based-approach">Garbled Circuit based Approach</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-cryptography-based-approach">Advanced Cryptography based Approach</a><ul class="nav section-nav flex-column">
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#homomorphic-encryption">Homomorphic Encryption</a></li>
+<li class="toc-h6 nav-item toc-entry"><a class="reference internal nav-link" href="#functional-encryption">Functional Encryption</a></li>
+</ul>
+</li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#mixed-protocol-approach">Mixed Protocol Approach</a></li>
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#trusted-execution-environment-approach">Trusted Execution Environment Approach</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#architectureal-appraoch">Architectureal Appraoch</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#delegation-based-ml-architecture">Delegation-based ML Architecture</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#distributed-selective-sgd-architecture">Distributed Selective SGD Architecture</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#federated-learning-architecture">Federated Learning Architecture</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#knowledge-transfer-architecture">Knowledge Transfer Architecture</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hybrid-approach">Hybrid Approach</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#challenge-and-potential-directions">Challenge and Potential Directions</a></li>
 </ul>
   </nav></div>
 

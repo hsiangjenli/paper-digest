@@ -65,6 +65,10 @@ KeyTerms
      - Software As A Service
      - Todo.
    
+   * - TEE
+     - Trusted Execution Environment
+     - Todo.
+   
    * - V2X
      - Vehicle To Everything
      - Todo.

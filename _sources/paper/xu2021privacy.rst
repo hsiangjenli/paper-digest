@@ -5,6 +5,13 @@ WIP - :title-ref:`xu2021privacy`
 * Authors : :cite:authors:`xu2021privacy`  
 
 
+An overview of mindmap
+----------------------
+
+.. raw:: html
+   /_static/image/image.png
+    <a href="_static/html/xu2021privacy.html">testurl</a>
+
 Before starting
 ---------------
 

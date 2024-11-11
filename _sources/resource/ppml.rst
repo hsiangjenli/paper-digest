@@ -24,6 +24,10 @@ Privacy Preserving Machine Learning framework
 * https://github.com/facebookresearch/CrypTen
 
 
+Others
+------
+* https://github.com/mpc-msri/EzPC :cite:`rathee2021sirnn`
+
 References
 ----------
 .. bibliography::
