@@ -20,7 +20,7 @@ help:
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 image:
-	docker buildx build --platform linux/amd64  -t hsiangjenli/sphinx-doc:paper-digest .github
+	docker buildx build --platform linux/amd64  -t hsiangjenli/sphinx-doc:paper-digest .github --no-cache
 
 c:
 	sudo chmod -R 777 build
@@ -28,4 +28,5 @@ c:
 	make run
 
 run:
-	docker run -it --rm -v "$(PWD):/docs" hsiangjenli/sphinx-doc:paper-digest python source/resource/keyterm/gen.py && make html
+	docker run -it --rm -v "/home/hsiangjenli/Downloads/github/paper-digest:/docs" hsiangjenli/sphinx-doc:paper-digest python source/resource/keyterm/gen.py
+	docker run -it --rm -v "/home/hsiangjenli/Downloads/github/paper-digest:/docs" hsiangjenli/sphinx-doc:paper-digest make html
