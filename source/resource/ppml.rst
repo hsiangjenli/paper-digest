@@ -27,6 +27,8 @@ Privacy Preserving Machine Learning framework
 Others
 ------
 * https://github.com/mpc-msri/EzPC :cite:`rathee2021sirnn`
+* https://github.com/blynn/pbc :cite:`lynn2007implementation`
+* https://github.com/sobolevn/awesome-cryptography
 
 References
 ----------
