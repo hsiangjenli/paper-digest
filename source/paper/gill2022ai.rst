@@ -14,6 +14,7 @@ research challenges
 
 Key Concepts and Terminologies
 ------------------------------
+
 * Autonomic Computing Initiative (ACI) 
    - The target of the ACI is to develop self-managing systems that can automatically adapt to changes in the environment and requirements of the system without human intervention.
    - Inspired by human nervous system and human cognition
