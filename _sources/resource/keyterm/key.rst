@@ -11,15 +11,15 @@ KeyTerms
    
    * - ACI
      - Autonomic Computing Initiative
-     - Todo.
+     - A framework to develop self-managing computing systems :cite:`chatgpt2024`.
    
    * - AEs
      - Autonomic Elements
-     - Todo.
+     - Independent components that implement self-management functions :cite:`chatgpt2024`.
    
    * - AM
      - Autonomic Manager
-     - Todo.
+     - A system component that manages resources automatically :cite:`chatgpt2024`.
    
    * - FHE
      - Fully Homomorphic Encryption
@@ -31,49 +31,54 @@ KeyTerms
    
    * - IaaS
      - Infrastructure As A Service
-     - Todo.
+     - Cloud-based virtualized computing resources such as servers and storage :cite:`chatgpt2024`.
    
    * - IoE
      - Internet Of Everything
-     - Todo.
+     - A network connecting people, devices, and data for smarter interactions :cite:`chatgpt2024`.
    
    * - MAPE
      - Monitor Analyse Plan Execute
-     - Todo.
+     - A loop process used for autonomic computing systems :cite:`chatgpt2024`.
    
    * - PaaS
      - Platform As A Service
-     - Todo.
+     - A cloud service model that provides a platform for app development :cite:`chatgpt2024`.
    
    * - QoE
      - Quality Of Experience
-     - Todo.
+     - User satisfaction with a service's overall performance :cite:`chatgpt2024`.
    
    * - QoS
      - Quality Of Service
-     - Todo.
+     - The performance standard for a network or service :cite:`chatgpt2024`.
    
    * - SARSA
      - State Action Reward State Action
-     - Todo.
+     - An algorithm for reinforcement learning :cite:`chatgpt2024`.
    
    * - SLOs
      - Service Level Objectives
-     - Todo.
+     - Specific targets for service performance within slas :cite:`chatgpt2024`.
    
    * - SaaS
      - Software As A Service
-     - Todo.
+     - A cloud model delivering software via the internet :cite:`chatgpt2024`.
    
    * - TEE
      - Trusted Execution Environment
-     - Todo.
+     - A secure area of a processor for trusted operations :cite:`chatgpt2024`.
    
    * - V2X
      - Vehicle To Everything
-     - Todo.
+     - Communication between vehicles and external systems :cite:`chatgpt2024`.
    
    * - X
      - Autonomous Computing
-     - Todo.
+     - Computing systems capable of managing themselves :cite:`chatgpt2024`.
    
+
+References
+----------
+.. bibliography::
+    :filter: docname in docnames

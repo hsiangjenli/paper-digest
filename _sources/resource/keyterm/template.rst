@@ -13,3 +13,8 @@ KeyTerms
      - {{ keyterm.Term }}
      - {{ keyterm.Definition }}
    {% endfor %}
+
+References
+----------
+.. bibliography::
+    :filter: docname in docnames

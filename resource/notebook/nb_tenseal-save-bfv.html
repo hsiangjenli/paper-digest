@@ -348,7 +348,9 @@ Requirement already satisfied: tenseal in /home/hsiangjenli/miniconda3/lib/pytho
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tenseal</span> <span class="k">as</span> <span class="nn">ts</span>
 <span class="kn">from</span> <span class="nn">tenseal.enc_context</span> <span class="kn">import</span> <span class="n">Context</span>
 
-<span class="n">context</span> <span class="o">=</span> <span class="n">Context</span><span class="p">(</span><span class="n">scheme</span><span class="o">=</span><span class="n">ts</span><span class="o">.</span><span class="n">SCHEME_TYPE</span><span class="o">.</span><span class="n">BFV</span><span class="p">,</span> <span class="n">poly_modulus_degree</span><span class="o">=</span><span class="mi">4096</span><span class="p">,</span> <span class="n">plain_modulus</span><span class="o">=</span><span class="mi">1032193</span><span class="p">)</span>
+<span class="n">context</span> <span class="o">=</span> <span class="n">Context</span><span class="p">(</span>
+    <span class="n">scheme</span><span class="o">=</span><span class="n">ts</span><span class="o">.</span><span class="n">SCHEME_TYPE</span><span class="o">.</span><span class="n">BFV</span><span class="p">,</span> <span class="n">poly_modulus_degree</span><span class="o">=</span><span class="mi">4096</span><span class="p">,</span> <span class="n">plain_modulus</span><span class="o">=</span><span class="mi">1032193</span>
+<span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -358,10 +360,12 @@ Requirement already satisfied: tenseal in /home/hsiangjenli/miniconda3/lib/pytho
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">base64</span>
 
+
 <span class="k">def</span> <span class="nf">save</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">data</span><span class="p">):</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
         <span class="n">data</span> <span class="o">=</span> <span class="n">base64</span><span class="o">.</span><span class="n">b64encode</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
         <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
 
 <span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="n">file_name</span><span class="p">):</span>
     <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
@@ -380,7 +384,7 @@ Requirement already satisfied: tenseal in /home/hsiangjenli/miniconda3/lib/pytho
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s_sk</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">serialize</span><span class="p">(</span><span class="n">save_secret_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">save</span><span class="p">(</span><span class="s2">&quot;secret.key&quot;</span><span class="p">,</span> <span class="n">s_sk</span><span class="p">)</span>
 
-<span class="n">context</span><span class="o">.</span><span class="n">make_context_public</span><span class="p">()</span> <span class="c1"># Remove secret key from context</span>
+<span class="n">context</span><span class="o">.</span><span class="n">make_context_public</span><span class="p">()</span>  <span class="c1"># Remove secret key from context</span>
 <span class="n">s_pk</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">serialize</span><span class="p">(</span><span class="n">save_public_key</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">save</span><span class="p">(</span><span class="s2">&quot;public.key&quot;</span><span class="p">,</span> <span class="n">s_pk</span><span class="p">)</span>
 </pre></div>
@@ -419,7 +423,9 @@ Requirement already satisfied: tenseal in /home/hsiangjenli/miniconda3/lib/pytho
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Transform the loaded data back into context and bfvvector</span>
 <span class="n">load_sk_context</span> <span class="o">=</span> <span class="n">ts</span><span class="o">.</span><span class="n">context_from</span><span class="p">(</span><span class="n">load_sk_value</span><span class="p">)</span>
 <span class="n">load_pk_context</span> <span class="o">=</span> <span class="n">ts</span><span class="o">.</span><span class="n">context_from</span><span class="p">(</span><span class="n">load_pk_value</span><span class="p">)</span>
-<span class="n">load_encrypted_vector_context</span> <span class="o">=</span> <span class="n">ts</span><span class="o">.</span><span class="n">BFVVector</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">load_pk_context</span><span class="p">,</span> <span class="n">load_encrypted_vector_value</span><span class="p">)</span>
+<span class="n">load_encrypted_vector_context</span> <span class="o">=</span> <span class="n">ts</span><span class="o">.</span><span class="n">BFVVector</span><span class="o">.</span><span class="n">load</span><span class="p">(</span>
+    <span class="n">load_pk_context</span><span class="p">,</span> <span class="n">load_encrypted_vector_value</span>
+<span class="p">)</span>
 
 <span class="n">load_sk</span> <span class="o">=</span> <span class="n">load_sk_context</span><span class="o">.</span><span class="n">secret_key</span><span class="p">()</span><span class="o">.</span><span class="n">data</span>
 <span class="n">load_pk</span> <span class="o">=</span> <span class="n">load_pk_context</span><span class="o">.</span><span class="n">public_key</span><span class="p">()</span><span class="o">.</span><span class="n">data</span>
@@ -448,7 +454,7 @@ Requirement already satisfied: tenseal in /home/hsiangjenli/miniconda3/lib/pytho
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">load_encrypted_vector</span><span class="o">+</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">load_sk</span><span class="p">)</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">load_encrypted_vector</span> <span class="o">+</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">decrypt</span><span class="p">(</span><span class="n">load_sk</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -465,7 +471,7 @@ Requirement already satisfied: tenseal in /home/hsiangjenli/miniconda3/lib/pytho
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">load_pk_context</span><span class="o">.</span><span class="n">secret_key</span><span class="p">()</span><span class="o">.</span><span class="n">data</span> <span class="c1"># Public Context should not contain the secret key.</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">load_pk_context</span><span class="o">.</span><span class="n">secret_key</span><span class="p">()</span><span class="o">.</span><span class="n">data</span>  <span class="c1"># Public Context should not contain the secret key.</span>
 </pre></div>
 </div>
 </div>
