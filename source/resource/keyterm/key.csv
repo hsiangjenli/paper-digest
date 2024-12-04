@@ -16,3 +16,5 @@ SaaS,Software As A Service,A cloud model delivering software via the internet :c
 TEE,Trusted Execution Environment,A secure area of a processor for trusted operations :cite:`chatgpt2024`.
 V2X,Vehicle To Everything,Communication between vehicles and external systems :cite:`chatgpt2024`.
 X,Autonomous Computing,Computing systems capable of managing themselves :cite:`chatgpt2024`.
+X,Multi-View Learning,TODO
+X,Multi-Task Learning,TODO
