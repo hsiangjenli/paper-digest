@@ -28,10 +28,14 @@ jobs:
 
       # Transform Markdown to HTML in Target Folder ----------------
       - name: Transform Several Markdown to HTML
-        run: |
-          for file in source/_static/markmap/*.md; do
-              markmap $file -o ${file%.md}.html --no-open
-          done
+        uses: addnab/docker-run-action@v3
+        with:
+          image: hsiangjenli/markmap:latest
+          options: --platform linux/amd64 -v ${{ github.workspace }}:/workspace
+          run: |
+            for file in /workspace/source/_static/markmap/*.md; do
+                markmap $file -o ${file%.md}.html --no-open
+            done
 
       # Sphinxdoc Image ----------------
       - name: Use Docker Image
