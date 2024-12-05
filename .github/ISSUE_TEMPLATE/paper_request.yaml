@@ -1,6 +1,6 @@
 name: Paper Reading
 description: Template for documenting insights and purpose of reading a research paper.
-title: "[Paper] <Paper Title> `<BibTeX>`"
+title: "[Paper] <Paper Title> - `<BibTeX>`"
 labels:
   - Paper
   - Research
