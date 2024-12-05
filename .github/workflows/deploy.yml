@@ -15,16 +15,6 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           submodules: recursive
-      
-      # Setup Node ----------------
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '20'
-      
-      # Install markmap-cli ----------------
-      - name: Install markmap-cli
-        run: npm i markmap-cli
 
       # Transform Markdown to HTML in Target Folder ----------------
       - name: Transform Several Markdown to HTML
