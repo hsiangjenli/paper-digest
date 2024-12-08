@@ -20,7 +20,7 @@ help:
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 image:
-	docker buildx build --platform linux/amd64  -t hsiangjenli/sphinx-doc:paper-digest-2024-12-08 .github
+	docker buildx build --platform linux/amd64  -t hsiangjenli/sphinx-doc:paper-digest-2024-12-08 .github --push
 	docker buildx build --platform linux/amd64  -t hsiangjenli/markmap:latest -f .github/Dockerfile.markmap .
 
 run:

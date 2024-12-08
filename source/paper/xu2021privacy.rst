@@ -3,7 +3,7 @@ WIP - :title-ref:`xu2021privacy`
 
 .. raw:: html
 
-   <iframe src="_static/markmap/xu2021privacy.html" width="100%" height="500px"></iframe>
+   <iframe src="../_static/markmap/xu2021privacy.html" width="100%" height="500px"></iframe>
 
 * Publish Year : :cite:year:`xu2021privacy`  
 * Authors : :cite:authors:`xu2021privacy`  
