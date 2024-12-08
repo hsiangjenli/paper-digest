@@ -18,7 +18,7 @@ Paper Digest
    :caption: 📚 A curated of key terms
    :maxdepth: 1
 
-   resource/keyterm/key
+   terminology
 
 .. toctree:: 
    :glob:
