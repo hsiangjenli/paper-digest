@@ -1,5 +1,9 @@
 # WIP - Outline of {title-ref}`xu2021privacy`
 
+.. raw:: html
+
+   <iframe src="_static/markmap/xu2021privacy.html" width="100%" height="500px"></iframe>
+
 > - Year: {cite:year}`xu2021privacy`
 > - Author: {cite:authors}`xu2021privacy`
 
