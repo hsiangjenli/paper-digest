@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.2/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.8.5/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.17.2/dist/browser/index.js"></script><script>((getMarkmap) => {
+          window.WebFontConfig = {
+            custom: {
+              families: [
+                "KaTeX_AMS",
+                "KaTeX_Caligraphic:n4,n7",
+                "KaTeX_Fraktur:n4,n7",
+                "KaTeX_Main:n4,n7,i4,i7",
+                "KaTeX_Math:i4,i7",
+                "KaTeX_Script",
+                "KaTeX_SansSerif:n4,n7,i4",
+                "KaTeX_Size1",
+                "KaTeX_Size2",
+                "KaTeX_Size3",
+                "KaTeX_Size4",
+                "KaTeX_Typewriter"
+              ]
+            },
+            active: () => {
+              getMarkmap().refreshHook.call();
+            }
+          };
+        })(() => window.markmap)</script><script src="https://cdn.jsdelivr.net/npm/webfontloader@1.6.28/webfontloader.js" defer></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.17.2/dist/index.js"></script><script>((r) => {
+            setTimeout(r);
+          })(() => {
+  const { markmap, mm } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute("style", "position:absolute;bottom:20px;right:20px");
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+            })(() => window.markmap,null,{"content":"WIP - Outline of {title-ref}<code>xu2021privacy</code>","children":[{"content":"Privacy Preserving {P}hase in PPML","children":[{"content":"Model Generation","children":[],"payload":{"lines":"17,18"}},{"content":"Model Serving","children":[],"payload":{"lines":"23,24"}},{"content":"Full Pipeline","children":[],"payload":{"lines":"30,31"}}],"payload":{"lines":"9,10"}},{"content":"Privacy {G}uarantees in PPML","children":[{"content":"Object-Oriented Privacy Guarantee","children":[{"content":"Data Oriented","children":[],"payload":{"lines":"37,38"}},{"content":"Model Oriented","children":[],"payload":{"lines":"41,42"}}],"payload":{"lines":"36,37"}},{"content":"Pipeline-Orientied Privacy Guarantee","children":[{"content":"Model Generation Phase","children":[{"content":"Vanilla Local Privacy Guarantee","children":[],"payload":{"lines":"56,57"}},{"content":"Primary Local Privacy Guarantee","children":[],"payload":{"lines":"59,60"}},{"content":"Enhanced Local Privacy Guarantee","children":[],"payload":{"lines":"62,63"}}],"payload":{"lines":"50,51"}},{"content":"Model Serving Phase","children":[{"content":"Typical types of privacy leakage","children":[{"content":"Disclosure of Membership","children":[],"payload":{"lines":"68,69"}},{"content":"Class Representative","children":[],"payload":{"lines":"69,70"}},{"content":"Property","children":[],"payload":{"lines":"70,72"}}],"payload":{"lines":"67,68"}},{"content":"Global Model Privacy Guarantee","children":[],"payload":{"lines":"78,79"}}],"payload":{"lines":"65,66"}},{"content":"Full Privacy Guarantee","children":[],"payload":{"lines":"83,84"}}],"payload":{"lines":"44,45"}}],"payload":{"lines":"34,35"}},{"content":"Technical {U}tility in PPML","children":[{"content":"Data Publish Approach","children":[{"content":"Elimitation-based Approach","children":[{"content":"<span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>k</mi></mrow><annotation encoding=\"application/x-tex\">k</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.69444em;vertical-align:0em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.03148em;\">k</span></span></span></span>-anonymity","children":[],"payload":{"lines":"110,111"}},{"content":"<span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>l</mi></mrow><annotation encoding=\"application/x-tex\">l</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.69444em;vertical-align:0em;\"></span><span class=\"mord mathnormal\" style=\"margin-right:0.01968em;\">l</span></span></span></span>-diversity","children":[],"payload":{"lines":"111,112"}},{"content":"<span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>t</mi></mrow><annotation encoding=\"application/x-tex\">t</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.61508em;vertical-align:0em;\"></span><span class=\"mord mathnormal\">t</span></span></span></span>-closeness","children":[],"payload":{"lines":"112,114"}}],"payload":{"lines":"106,107"}},{"content":"Perturbation-based Approach","children":[{"content":"Differential Privacy","children":[],"payload":{"lines":"115,116"}},{"content":"Sketching","children":[],"payload":{"lines":"116,118"}}],"payload":{"lines":"114,115"}},{"content":"Confusion-based Approach (Cryptography)","children":[{"content":"Symmetric encryption (e.g. AES) + Garbled circuits / Oblivious transfer","children":[],"payload":{"lines":"119,120"}},{"content":"Homomorphic encryption","children":[],"payload":{"lines":"120,121"}},{"content":"Functional encryption","children":[],"payload":{"lines":"121,123"}}],"payload":{"lines":"118,119"}}],"payload":{"lines":"104,105"}},{"content":"Data Processing Approach","children":[{"content":"Ordinary Computation","children":[{"content":"Elimination-based Approach","children":[],"payload":{"lines":"128,129"}},{"content":"Perturbation-based Approach","children":[],"payload":{"lines":"129,130"}}],"payload":{"lines":"125,126"}},{"content":"Secure Computation","children":[{"content":"Additive Mask based Approach","children":[{"content":"Pairwise Additive Masking Based Secure Computation Approach","children":[{"content":"<span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>t</mi></mrow><annotation encoding=\"application/x-tex\">t</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.61508em;vertical-align:0em;\"></span><span class=\"mord mathnormal\">t</span></span></span></span>-of-<span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>n</mi></mrow><annotation encoding=\"application/x-tex\">n</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.43056em;vertical-align:0em;\"></span><span class=\"mord mathnormal\">n</span></span></span></span> secret sharing","children":[],"payload":{"lines":"140,141"}},{"content":"Multi-Secret Sharing","children":[],"payload":{"lines":"141,142"}}],"payload":{"lines":"139,142"}},{"content":"Double Masking Pairwise Based Protocol","children":[{"content":"Prevents the failure happened in Pairwise Additive Masking","children":[],"payload":{"lines":"143,144"}}],"payload":{"lines":"142,144"}},{"content":"Anonymous Communication","children":[{"content":"DC-nets (Dining Cryptographers Networks)","children":[],"payload":{"lines":"145,146"}},{"content":"mix-nets","children":[],"payload":{"lines":"146,149"}}],"payload":{"lines":"144,149"}}],"payload":{"lines":"135,136"}},{"content":"Garbled Circuit based Approach","children":[],"payload":{"lines":"149,150"}},{"content":"Advanced Cryptography based Approach","children":[{"content":"Homomorphic Encryption","children":[],"payload":{"lines":"152,153"}},{"content":"Functional Encryption","children":[],"payload":{"lines":"153,154"}}],"payload":{"lines":"151,152"}},{"content":"Mixed Protocol Approach","children":[{"content":"TASTY","children":[],"payload":{"lines":"158,159"}},{"content":"ABY","children":[],"payload":{"lines":"159,160"}},{"content":"ABY<span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><msup><mrow></mrow><mn>3</mn></msup></mrow><annotation encoding=\"application/x-tex\">^3</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"base\"><span class=\"strut\" style=\"height:0.8141079999999999em;vertical-align:0em;\"></span><span class=\"mord\"><span></span><span class=\"msupsub\"><span class=\"vlist-t\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.8141079999999999em;\"><span style=\"top:-3.063em;margin-right:0.05em;\"><span class=\"pstrut\" style=\"height:2.7em;\"></span><span class=\"sizing reset-size6 size3 mtight\"><span class=\"mord mtight\">3</span></span></span></span></span></span></span></span></span></span></span>","children":[],"payload":{"lines":"160,161"}},{"content":"CrypTen","children":[],"payload":{"lines":"161,162"}},{"content":"Falcon","children":[],"payload":{"lines":"162,164"}}],"payload":{"lines":"155,156"}},{"content":"Trusted Execution Environment Approach","children":[{"content":"Code Authentication","children":[],"payload":{"lines":"165,166"}},{"content":"Runtime State Integrity","children":[],"payload":{"lines":"166,167"}},{"content":"Confidentiality","children":[],"payload":{"lines":"167,169"}}],"payload":{"lines":"164,165"}}],"payload":{"lines":"131,132"}}],"payload":{"lines":"123,124"}},{"content":"Architectureal Appraoch","children":[{"content":"Delegation-based ML Architecture","children":[{"content":"CryptoML","children":[],"payload":{"lines":"173,174"}},{"content":"SecureML","children":[],"payload":{"lines":"174,176"}}],"payload":{"lines":"171,172"}},{"content":"Distributed Selective SGD Architecture","children":[],"payload":{"lines":"176,177"}},{"content":"Federated Learning Architecture","children":[],"payload":{"lines":"178,179"}},{"content":"Knowledge Transfer Architecture","children":[{"content":"Knowledge Distillation","children":[],"payload":{"lines":"182,183"}},{"content":"Model Compression","children":[],"payload":{"lines":"183,184"}},{"content":"Transfer Learning","children":[],"payload":{"lines":"184,186"}}],"payload":{"lines":"180,181"}}],"payload":{"lines":"169,170"}},{"content":"Hybrid Approach","children":[],"payload":{"lines":"186,187"}}],"payload":{"lines":"87,88"}}],"payload":{"lines":"0,1"}},null)</script>
+</body>
+</html>
