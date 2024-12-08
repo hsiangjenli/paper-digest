@@ -1,7 +1,7 @@
 FROM sphinxdoc/sphinx
 
 WORKDIR /workspace
-ADD .github/requirements.txt /workspace/requirements.txt
+ADD requirements.txt /workspace/requirements.txt
 
 RUN apt-get update && apt-get install -y pandoc
 
