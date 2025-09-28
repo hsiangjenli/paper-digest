@@ -34,7 +34,7 @@ class TitleRefRole(SphinxRole):
         return [node], []
 
 
-extensions = ["sphinxcontrib.bibtex", "sphinx_add_text", "myst_parser", "nbsphinx"]
+extensions = ["sphinxcontrib.bibtex", "sphinx_add_text", "myst_parser", "nbsphinx", "sphinxcontrib.mermaid"]
 
 bibtex_bibfiles = ["paper.bib"]
 bibtex_default_style = "unsrt"
