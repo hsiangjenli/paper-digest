@@ -44,6 +44,7 @@ myst_enable_extensions = [
     "dollarmath",  # 支援 $...$ 內的數學表達式
     "amsmath",  # 支援數學符號
     "colon_fence",  # 支援 `:::` 區塊
+    "myst_parser"
 ]
 
 nbsphinx_execute = "never"
@@ -65,6 +66,12 @@ html_css_files = [
     "css/custom.css",
 ]
 
+source_suffix = {
+    ".rst": "restructuredtext",
+    ".md": "markdown",
+}
+
+myst_fence_as_directive = ["mermaid"]
 
 def setup(app):
     app.add_role("title-ref", TitleRefRole())

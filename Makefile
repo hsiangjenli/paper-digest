@@ -7,6 +7,7 @@ SPHINXOPTS    ?=
 SPHINXBUILD   ?= sphinx-build
 SOURCEDIR     = source
 BUILDDIR      = build
+DATE          = $(shell date +%Y-%m-%d)
 
 # Put it first so that "make" without argument is like "make help".
 help:
@@ -20,9 +21,13 @@ help:
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 image:
-	docker buildx build --platform linux/amd64  -t hsiangjenli/sphinx-doc:paper-digest-2024-12-08 .github --push
+	docker buildx build --platform linux/amd64  -t hsiangjenli/sphinx-doc:paper-digest-$(DATE) .github
+	docker tag hsiangjenli/sphinx-doc:paper-digest-$(DATE) hsiangjenli/sphinx-doc:paper-digest-latest
+	docker push hsiangjenli/sphinx-doc:paper-digest-$(DATE)
+	docker push hsiangjenli/sphinx-doc:paper-digest-latest
+	
 	docker buildx build --platform linux/amd64  -t hsiangjenli/markmap:latest -f .github/Dockerfile.markmap .
 
 run:
-	docker run -it --rm --platform=linux/amd64 -v "$(PWD):/workspace" hsiangjenli/sphinx-doc:paper-digest-2024-12-08 python source/_static/gen_keyword/script.py
-	docker run -it --rm --platform=linux/amd64 -v "$(PWD):/workspace" hsiangjenli/sphinx-doc:paper-digest-2024-12-08
+# 	docker run -it --rm --platform=linux/amd64 -v "$(PWD):/workspace" hsiangjenli/sphinx-doc:paper-digest-$(DATE) python source/_static/gen_keyword/script.py
+	docker run -it --rm --platform=linux/amd64 -v "$(PWD):/workspace" hsiangjenli/sphinx-doc:paper-digest-latest
