@@ -1,10 +1,11 @@
-FROM sphinxdoc/sphinx
+FROM ghcr.io/astral-sh/uv:python3.11-bookworm-slim
 
 WORKDIR /workspace
-ADD requirements.txt /workspace/requirements.txt
+COPY pyproject.toml /workspace/pyproject.toml
+COPY uv.lock /workspace/uv.lock
 
-RUN apt-get update && apt-get install -y pandoc
+RUN apt-get update && apt-get install -y pandoc make
 
-RUN pip3 install -r requirements.txt
+RUN uv sync
 
 CMD ["make", "html"]

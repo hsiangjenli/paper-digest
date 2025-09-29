@@ -4,7 +4,7 @@
 # You can set these variables from the command line, and also
 # from the environment for the first two.
 SPHINXOPTS    ?=
-SPHINXBUILD   ?= sphinx-build
+SPHINXBUILD   ?= uv run sphinx-build
 SOURCEDIR     = source
 BUILDDIR      = build
 DATE          = $(shell date +%Y-%m-%d)
@@ -21,7 +21,7 @@ help:
 	@$(SPHINXBUILD) -M $@ "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 image:
-	docker buildx build --platform linux/amd64  -t hsiangjenli/sphinx-doc:paper-digest-$(DATE) .github
+	docker buildx build --platform linux/amd64  -t hsiangjenli/sphinx-doc:paper-digest-$(DATE) -f .github/Dockerfile .
 	docker tag hsiangjenli/sphinx-doc:paper-digest-$(DATE) hsiangjenli/sphinx-doc:paper-digest-latest
 	docker push hsiangjenli/sphinx-doc:paper-digest-$(DATE)
 	docker push hsiangjenli/sphinx-doc:paper-digest-latest
